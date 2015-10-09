@@ -1,0 +1,59 @@
+id,text_en,text_de
+menu_trends,Hunger Trends,Hungertrends
+menu_methodology,Methodology,Methodik
+menu_testimonials,Testimonials,Erfahrungsberichte
+menu_press,Press,Presse
+menu_language,Language,Sprache
+menu_english,English,Englisch 
+menu_german,German,Deutsch
+block_results_title,Results,Ergebnisse
+block_index_title,Index,Index
+block_hunger_title,Hunger,Hunger
+block_methodology_title,Methodology,Methodik
+block_about_title,About,Über den WHI
+block_contact_title,Contact,Kontakt
+block_results_description,"Learn about global, regional, and national hunger levels","Lerne mehr über globale, regionale und nationale Hungerwerte"
+block_index_description,Explore the Global Hunger Index,Entdecke den Welthunger-Index
+block_hunger_description,Learn about different types of hunger,Lerne mehr über die verschiedenen Arten von Hunger
+block_methodology_description,How the Global Hunger Index is calculated,Wie wird der Welthunger-Index berechnet?
+block_about_description,What is the Global Hunger Index?,Was ist der Welthunger-Index? 
+block_contact_description,Get in touch,Kontakt
+footer_credits,Credits,Impressum
+footer_source_code,Source code,Quellcode
+footer_made_by,Made by,Erstellt von
+map_score,Score,Punkte
+map_level,Level,Wert
+map_very_alarming,Extremely alarming,Gravierend
+map_alarming,Alarming,Sehr ernst
+map_serious,Serious,Ernst
+map_moderate,Moderate,Mäßig 
+map_low,Low,Wenig
+map_no_data,No data,Keine Angaben
+map_not_calculated,Not calculated,Nicht berechnet
+country_score_data,Country data (in %),Länderdaten (in %)
+country_score_undernourished,Proportion of undernourished in population (%),Anteil der Unterernährten an der Bevölkerung (%)
+country_score_stunting,Prevalence of stunting in children under five years (%),Anteil der ausgezehrten Kinder unter fünf Jahren (%)
+country_score_mortality,Under five mortality rate (%), Kindersterblichkeit unter fünf (%)
+country_score_wasting,Prevalence of wasting in children under five years (%), Anteil der wachstumsverzögerten Kinder unter fünf Jahren (%)
+share_title,Share,Teilen
+share_description,Share this visualization with others on your preferred social network.,Teile diese Grafik mit anderen in deinen sozialen Netzwerken
+embed_title,Embed,Einbetten
+embed_description,Use the following embed code to embed this visualization in your on website.,"Nutze den folgenden Code, um die Grafik einzubetten "
+map_ranking,GHI Scores,Ranking 
+ranking_description,"GHI scores by country, from highest to lowest hunger levels.","WHI-Werte nach Ländern, von den höchsten zu den niedrigsten"
+map_find_out_more,Find out more,Mehr erfahren
+country_ghi_description,The 2015 GHI Score for <country> is <score>,Der <Jahr> WHI-Wert für <Land> ist <Punkte>
+country_score_evolution,<score> points (<prev_score> in <year>),<Punkte> Punktwerte (<vorige_Punkte> in <Jahr>)
+country_ghi_chart,Global hunger index evolution,Entwicklung des Welthunger-Index
+country_detailed_score,Detailed score for 2015,Detaillierte Werte für 2015
+country_evolution_details,Evolution from 1990 to 2015,Entwicklung von 1990 bis 2015
+name_app,2015 Global Hunger Index App,2015 Welthunger-Index App
+name,2015 Global Hunger Index,2015 Welthunger-Index
+points,points,punkte
+evolution,Evolution,Entwicklung
+ifpri_estimate,IFPRI estimate,IFPRI-Schätzungen
+trends_zone,Zone,Region
+trends_country,Country,Land
+trends_year,Year,Jahr
+trends_all_countries,All Countries,Alle Länder
+trends_search,Search,Suchen

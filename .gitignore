@@ -1,0 +1,17 @@
+# Virtualenv
+.env/
+
+# Python
+*.pyc
+
+# HTML and data files are generated and copied by the
+# tools/generate_datafiles.py script
+/site/app/html
+/site/app/data/
+
+# Generated files
+/site/dist/
+
+# GitHub Pages cache
+/site/.publish/
+node_modules

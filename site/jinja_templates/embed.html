@@ -1,0 +1,81 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Global Hunger Index</title>
+  <meta name="description" content="The Global Hunger Index (GHI) is a tool designed to comprehensively measure and track hunger globally, regionally, and by country. Each year, the International Food Policy Research Institute (IFPRI) calculates GHI scores in order to assess progress, or the lack thereof, in decreasing hunger. The GHI is designed to raise awareness and understanding of regional and country differences in the struggle against hunger. By calling attention to the issue, we hope that the GHI will trigger action to reduce hunger around the world.">
+
+  <link rel="stylesheet" href="{{ relpath }}styles/leaflet.css">    
+  <link rel="stylesheet" href="{{ relpath }}fonts/foundation-icons/foundation-icons.css" />    
+  <link rel="stylesheet" href="{{ relpath }}styles/app.css">
+
+
+  <script src="{{ relpath }}scripts/modernizr.js"></script>
+  
+  <!-- embed scripts -->
+  <link rel="stylesheet" href="{{ relpath }}styles/leaflet.zoomin.css" media="screen">
+
+  <script src="{{ relpath }}scripts/leaflet.js"></script>
+  <script src="{{ relpath }}scripts/leaflet.ajax.min.js"></script>
+  <script src="{{ relpath }}scripts/leaflet.zoomin.js"></script>
+  <script src="{{ relpath }}scripts/main.js"></script>
+  <!-- end embed scripts -->
+
+  <meta property="og:title" content="Global Hunger Index 2015" />
+  <meta property="og:description" content="The Global Hunger Index (GHI) is a tool designed to comprehensively measure and track hunger globally, regionally, and by country. Each year, the International Food Policy Research Institute (IFPRI) calculates GHI scores in order to assess progress, or the lack thereof, in decreasing hunger. The GHI is designed to raise awareness and understanding of regional and country differences in the struggle against hunger. By calling attention to the issue, we hope that the GHI will trigger action to reduce hunger around the world." />
+  <meta property="og:url" content="http://ghi.ifpri.org" />
+  <meta property="og:image" content="http://ghi.ifpri.org/images/share.png" />
+
+  <link rel="shortcut icon" href="{{ relpath }}images/favicon.ico">
+</head>
+<body>
+
+  <div id="embed-map" class="row collapse full-width">
+    
+    <div class="map-wrapper">
+      <div id="map-application" class="large-12 columns">
+        <div id="map" class="map"></div>
+      </div><!-- map -->
+
+      <div id="map-legend" class="large-12 columns">
+        <h1 id="ghi-brand"><a href="{{ relpath }}">
+              <img src="{{ relpath }}images/ghi.svg" onerror="this.src='{{ relpath }}images/ghi.png'" alt="{{ m.name }}">
+              <span>{{ m.name }}</span>
+        </a></h1><!-- brand -->
+        <ul class="ghi-levels">
+          <li class="extra-alarming"><i class="fi-stop small"></i> {{ m.map_very_alarming }} <em>&ge; 50</em></li>
+          <li class="alarming"><i class="fi-stop small"></i> {{ m.map_alarming }} <em>35.0-49.9</em></li>
+          <li class="serious"><i class="fi-stop small"></i> {{ m.map_serious }} <em>20.0-34.9</em></li>
+          <li class="moderate"><i class="fi-stop small"></i> {{ m.map_moderate }} <em>10.0-19.9</em></li>
+          <li class="low"><i class="fi-stop small"></i> {{ m.map_low }} <em>&le; 9.9</em></li>
+          <li class="no-data"><i class="fi-stop small"></i> {{ m.map_no_data }} </li>
+          <li class="indust-country"><i class="fi-stop small"></i> {{ m.map_not_calculated }} </li>
+        </ul>
+      </div><!-- legend -->
+    </div>
+  </div>
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="{{ relpath }}scripts/jquery.js"></script>
+  <script src="{{ relpath }}scripts/foundation.min.js"></script>
+  <script src="{{ relpath }}scripts/foundation.magellan.js"></script>
+  <script src="{{ relpath }}scripts/foundation-scripts.js"></script>
+  <script src="{{ relpath }}scripts/leaflet.js"></script>
+  <script src="{{ relpath }}scripts/leaflet.ajax.min.js"></script>
+  <script src="{{ relpath }}scripts/leaflet.zoomin.js"></script>
+  <script src="{{ relpath }}scripts/main.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  {% block scripts %}{% endblock %}
+  <!-- endbuild -->
+</body>
+</html>

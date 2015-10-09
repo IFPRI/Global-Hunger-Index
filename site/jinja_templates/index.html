@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<link rel="stylesheet" href="{{ relpath }}styles/leaflet.zoomin.css" media="screen">
+
+<script src="{{ relpath }}scripts/leaflet.js"></script>
+<script src="{{ relpath }}scripts/leaflet.ajax.min.js"></script>
+<script src="{{ relpath }}scripts/leaflet.zoomin.js"></script>
+<script src="{{ relpath }}scripts/spin.min.js"></script>
+<script src="{{ relpath }}scripts/leaflet.spin.js"></script>
+<script src="{{ relpath }}scripts/main.js"></script>
+
+{% endblock %}
+
+{% block content %}
+
+<div id="shareModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <div class="row">
+      <div class="large-6 columns">
+        <h4> {{ m.share_title }} </h4>
+        <p> {{ m.share_description }} </p>
+        <p>
+          <a target="_blank" class="twitter-share-button" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fghi.ifpri.org%2F&amp;text=2015%20Global%20Hunger%20Index%20-%20A%20tool%20designed%20to%20comprehensively%20measure%20and%20track%20hunger%20globally%20%23GHI2015"><i class="fi-social-twitter large"></i></a>
+          <a target="_blank" class="fb-share-button" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fghi.ifpri.org%2F"><i class="fi-social-facebook large"></i></a>
+        </p>
+      </div>
+      <div class="large-6 columns">      
+        <h4> {{ m.embed_title }} </h4>
+        <p> {{ m.embed_description }} </p>
+        <textarea><iframe src="http://ghi.ifpri.org/embed" width="100%" height="600" frameborder="0" allowfullscreen></iframe></textarea>
+      </div>
+    </div>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<div id="main-map" class="row collapse full-width">
+  <div class="large-8 columns">
+    <div id="map-application" class="row">
+      <div id="map" class="map"></div>
+    </div>
+    <div id="map-legend" class="row">
+      <ul class="ghi-levels large-block-grid-7 medium-block-grid-4 small-block-grid-3">
+        <li class="extra-alarming"><i class="fi-stop small"></i> {{ m.map_very_alarming }} <em>&ge; 50</em></li>
+        <li class="alarming"><i class="fi-stop small"></i> {{ m.map_alarming }} <em>35.0-49.9</em></li>
+        <li class="serious"><i class="fi-stop small"></i> {{ m.map_serious }} <em>20.0-34.9</em></li>
+        <li class="moderate"><i class="fi-stop small"></i> {{ m.map_moderate }} <em>10.0-19.9</em></li>
+        <li class="low"><i class="fi-stop small"></i> {{ m.map_low }} <em>&le; 9.9</em></li>
+        <li class="no-data"><i class="fi-stop small"></i> {{ m.map_no_data }} </li>
+        <li class="indust-country"><i class="fi-stop small"></i> {{ m.map_not_calculated }} </li>
+      </ul>
+    </div>
+  </div>
+  <div class="large-4 columns">
+    <div class="row">
+      <div class="large-12 columns year-select">
+        <strong>{{ m.map_ranking }}</strong>
+        <button id="year-button" href="#" data-dropdown="year-drop" aria-controls="year-drop" aria-expanded="false" class="dropdown">2015</button>
+        <ul id="year-drop" data-dropdown-content class="f-dropdown" aria-hidden="true">
+          <li><a class="2015" href="#">2015</a></li>
+          <li><a class="2005" href="#">2005</a></li>
+          <li><a class="2000" href="#">2000</a></li>
+          <li><a class="1995" href="#">1995</a></li>
+          <li><a class="1990" href="#">1990</a></li>
+        </ul>
+        <a class="button right tiny secondary radius" href="#" data-reveal-id="shareModal">
+          <i class="fi-share"></i> {{ m.share_title }}/{{ m.embed_title }}
+        </a>
+      </div>
+      <p class="large-12 columns">{{ m.ranking_description }}</p>
+    </div>
+    <div class="row">
+      <div id="table-container">
+        <table id="country-table" class="display" width="100%" cellspacing="0">
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="home-blocks" class="spaced-row">
+  <div class="row">
+    <a class="medium-4 columns" href="{{ linkrelpath }}trends/">
+      <div>
+        <h3>{{ m.block_index_title }}</h3>
+        <p>{{ m.block_index_description }}</p>
+      </div>
+    </a><!-- /Block -->
+    <a class="medium-4 columns" href="{{ linkrelpath }}results/">
+      <div>
+        <h3>{{ m.block_results_title }}</h3>
+        <p>{{ m.block_results_description }}</p>
+      </div>
+    </a><!-- /Block -->
+    <a class="medium-4 columns" href="{{ linkrelpath }}hunger/">
+      <div>
+        <h3>{{ m.block_hunger_title }}</h3>
+        <p>{{ m.block_hunger_description }}</p>
+      </div>
+    </a><!-- /Block -->
+  </div>
+  <div class="row">
+    <a class="medium-4 columns" href="{{ linkrelpath }}methodology/">
+      <div>
+        <h3>{{ m.block_methodology_title }}</h3>
+        <p>{{ m.block_methodology_description }}</p>
+      </div>
+    </a><!-- /Block -->
+    <a class="medium-4 columns" href="{{ linkrelpath }}about/">
+      <div>
+        <h3>{{ m.block_about_title }}</h3>
+        <p>{{ m.block_about_description }}</p>
+      </div>
+    </a><!-- /Block -->
+    <a class="medium-4 columns" href="{{ linkrelpath }}contact/">
+      <div>
+        <h3>{{ m.block_contact_title }}</h3>
+        <p>{{ m.block_contact_description }}</p>
+      </div>
+    </a><!-- /Block -->
+  </div>
+</section><!-- /#Home Blocks -->
+
+{% endblock content %}

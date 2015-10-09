@@ -1,0 +1,345 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<script src="{{ relpath }}scripts/leaflet.js"></script>
+<script src="{{ relpath }}scripts/leaflet.ajax.min.js"></script>
+<script src="{{ relpath }}scripts/spin.min.js"></script>
+<script src="{{ relpath }}scripts/leaflet.spin.js"></script>
+<script src="{{ relpath }}scripts/Chart.min.js"></script>
+<script src="{{ relpath }}scripts/countrymap.js"></script>
+<script>
+
+  // Global chart config
+  Chart.defaults.global.responsive = true;
+  Chart.defaults.global.maintainAspectRatio = false;
+
+  // Global Hunger Index score chart
+  var context = $('#chart-score').get(0).getContext('2d');
+  var scoreData = {
+    labels: ["1990", "1995", "2000", "2005", "2015"],
+    datasets: [
+    {
+      label: "{{ m.country_ghi_chart }}",
+      fillColor: "rgba(220,220,220,0.2)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+
+      data: [{{ score.year1990|replace("<", "") }}, {{ score.year1995|replace("<", "") }}, 
+             {{ score.year2000|replace("<", "") }}, {{ score.year2005|replace("<", "") }}, 
+             {{ score.year2015|replace("<", "") }}]
+    }],
+  };
+
+  // determine max bounds from the data's max value
+  var max_value = Math.max.apply(Math, scoreData.datasets[0].data);
+  var steps = Math.ceil(max_value/5) * 5 / 10;
+
+  var scoreChart = new Chart(context).Line(scoreData, {
+      scaleOverride: true,
+      scaleSteps: steps, 
+      scaleStepWidth: 10,
+      scaleStartValue: 5,
+      bezierCurve: false, 
+      // tooltips can be defined by functions too
+      // https://github.com/nnnick/Chart.js/issues/499
+      tooltipTemplate: function (d) {
+        if (d.value === 5) { return d.label + ": <" + d.value; } 
+        if (d.value === null) { 
+          if (window.location.href.indexOf('/de') > 1) {
+            return d.label + ": Keine Angaben"; 
+          } else {
+            return d.label + ": No data"; 
+          }
+            
+        }
+        return d.label + ": " + d.value;
+      }
+  });
+
+  // Undernourished chart
+  var context = $('#chart-undernourished').get(0).getContext('2d');
+  var underData = {
+    labels: ["1990", "1995", "2000", "2005", "2015"],
+    datasets: [
+    {
+      fillColor: "rgba(220,220,220,0.2)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+
+      data: [{{ d.undernourished_1990.score|replace("-", "null") }}, 
+             {{ d.undernourished_1995.score|replace("-", "null") }}, 
+             {{ d.undernourished_2000.score|replace("-", "null") }}, 
+             {{ d.undernourished_2005.score|replace("-", "null") }}, 
+             {{ d.undernourished_2015.score|replace("-", "null") }}]
+    }],
+  };
+  var underChart = new Chart(context).Line(underData, {
+      scaleOverride: true,
+      scaleSteps: 5,
+      scaleStepWidth: 20,
+      bezierCurve: false, 
+      tooltipTemplate: function (d) {
+        if (d.label === "1990" && {{ d.undernourished_1990.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "1995" && {{ d.undernourished_1995.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "2000" && {{ d.undernourished_2000.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "2005" && {{ d.undernourished_2005.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "2015" && {{ d.undernourished_2015.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.value === null) { 
+          if (window.location.href.indexOf('/de') > 1) {
+            return d.label + ": Keine Angaben"; 
+          } else {
+            return d.label + ": No data"; 
+          }
+        }
+      return d.label + ": " + d.value;
+      }
+  });
+  // Stunting chart
+  var context = $('#chart-stunting').get(0).getContext('2d');
+  var stuntingData = {
+    labels: ["1990", "1995", "2000", "2005", "2015"],
+    datasets: [
+    {
+      fillColor: "rgba(220,220,220,0.2)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+
+      data: [{{ d.stunting_1990.score|replace("-", "null") }}, 
+             {{ d.stunting_1995.score|replace("-", "null") }}, 
+             {{ d.stunting_2000.score|replace("-", "null") }}, 
+             {{ d.stunting_2005.score|replace("-", "null") }}, 
+             {{ d.stunting_2015.score|replace("-", "null") }}]
+    }],
+  };
+  var stuntingChart = new Chart(context).Line(stuntingData, {
+      scaleOverride: true,
+      scaleSteps: 5,
+      scaleStepWidth: 20,
+      bezierCurve: false, 
+      tooltipTemplate: function (d) {
+        if (d.label === "1990" && {{ d.stunting_1990.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "1995" && {{ d.stunting_1995.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "2000" && {{ d.stunting_2000.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "2005" && {{ d.stunting_2005.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "2015" && {{ d.stunting_2015.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.value === null) { 
+          if (window.location.href.indexOf('/de') > 1) {
+            return d.label + ": Keine Angaben"; 
+          } else {
+            return d.label + ": No data"; 
+          }
+        }
+        return d.label + ": " + d.value;
+      }
+  });
+  // Wasting chart
+  var context = $('#chart-wasting').get(0).getContext('2d');
+  var wastingData = {
+    labels: ["1990", "1995", "2000", "2005", "2015"],
+    datasets: [
+    {
+      fillColor: "rgba(220,220,220,0.2)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+
+      data: [{{ d.wasting_1990.score|replace("-", "null") }}, 
+             {{ d.wasting_1995.score|replace("-", "null") }}, 
+             {{ d.wasting_2000.score|replace("-", "null") }}, 
+             {{ d.wasting_2005.score|replace("-", "null") }}, 
+             {{ d.wasting_2015.score|replace("-", "null") }}]
+    }],
+  };
+  var wastingChart = new Chart(context).Line(wastingData, {
+      scaleOverride: true,
+      scaleSteps: 5,
+      scaleStepWidth: 20,
+      bezierCurve: false, 
+      tooltipTemplate: function (d) {
+        if (d.label === "1990" && {{ d.wasting_1990.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "1995" && {{ d.wasting_1995.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "2000" && {{ d.wasting_2000.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "2005" && {{ d.wasting_2005.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+        if (d.label === "2015" && {{ d.wasting_2015.estimate|lower }}) { return d.label + ": " + d.value + ' {{ m.ifpri_estimate }})'; }
+        if (d.value === null) { 
+          if (window.location.href.indexOf('/de') > 1) {
+            return d.label + ": Keine Angaben"; 
+          } else {
+            return d.label + ": No data"; 
+          }
+        }
+        return d.label + ": " + d.value;
+      }
+  });
+  // Mortality chart
+  var context = $('#chart-mortality').get(0).getContext('2d');
+  var mortalityData = {
+    labels: ["1990", "1995", "2000", "2005", "2013"],
+    datasets: [
+    {
+      fillColor: "rgba(220,220,220,0.2)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+
+      data: [{{ d.mortality_1990.score|replace("-", "null") }}, 
+             {{ d.mortality_1995.score|replace("-", "null") }}, 
+             {{ d.mortality_2000.score|replace("-", "null") }}, 
+             {{ d.mortality_2005.score|replace("-", "null") }}, 
+             {{ d.mortality_2013.score|replace("-", "null") }}]
+    }],
+  };
+  var mortalityChart = new Chart(context).Line(mortalityData, {
+      scaleOverride: true,
+      scaleSteps: 5,
+      scaleStepWidth: 20,
+      bezierCurve: false, 
+      tooltipTemplate: function (d) {
+        if (d.value === null) { 
+          if (window.location.href.indexOf('/de') > 1) {
+            return d.label + ": Keine Angaben"; 
+          } else {
+            return d.label + ": No data"; 
+          }
+        }
+        return d.label + ": " + d.value;
+      }
+  });
+
+  function getSeverityClass(d) {                                                    
+    if (d === '-') { return 'no-data'; }                                            
+    if (d === '<5') { return 'low'; }                                              
+    return d >= 50 ? 'extra-alarming' :                                            
+      d >= 35  ? 'alarming' :                                                      
+      d >= 20  ? 'serious' :                                                        
+      d >= 10  ? 'moderate' :                                                      
+      d >= 0   ? 'low' :                                                            
+      'not-calculated';                                                            
+  }
+  
+</script>
+
+{% endblock %}
+
+{% block content %}
+<section id="country-info" class="{{ level_class }}">
+
+  <div  id="main-map" class="row collapse full-width">
+    <div id="map-application" class="large-12 columns">
+      <div id="map" class="map"></div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="breadcrumbs">
+        <li><a href="../../">Home</a></li> <li class="current">{{ name }}</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row">  
+    <h1 class="large-12 columns">{{ name }}</h1>
+  </div>
+  
+  <div id="summary" class="row">
+    <div class="large-12 columns"> 
+      {% if score.year2015 == "null" %}
+      <p>A 2015 GHI score could not be calculated for {{ name }} because data for all underlying indicators were not available.</p>
+      {% else %}
+      {% if lang == "de" %}
+      <p class="severity">Der 2015 WHI-Wert für {{ name }} ist <strong>{{ score.year2015 }}</strong>.</p>
+      {% else %}
+      <p class="severity">The 2015 GHI Score for {{ name }} is <strong>{{ score.year2015 }}</strong>.</p>
+      {% endif %}
+
+      <p id="hunger-level"><em>{{ m.map_level }}</em> <strong>{{ level }}</strong></p>
+      {% endif %}
+
+      {% if scorediff %}
+        <p id="score-value"><em>{{ m.evolution }}</em> <strong class="{{ score_evolution }}"><i class="fi-arrow-{{ score_evolution }}"></i> {{ scorediff }} {{ m.points }} </strong> ({{ score.year2005 }} in 2005)</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row">
+    <h3 class="large-12 columns">{{ m.country_ghi_chart }}</h3>
+  </div>
+  <div class="row">
+    <canvas id="chart-score" class="large-12 columns"></canvas>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <h3>{{ m.country_detailed_score }}</h3>
+      <table>
+        <thead>
+          <tr>
+            <th> &nbsp;</th>
+            <th>{{ m.country_score_undernourished }}</th>
+            <th>{{ m.country_score_stunting }}</th>
+            <th>{{ m.country_score_mortality }}</th>
+            <th>{{ m.country_score_wasting }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>{{ m.country_score_data }}</th>
+            <td>{{ d.undernourished_2015.score }}</td>
+            <td>{{ d.stunting_2015.score }}</td>
+            <td>{{ d.mortality_2013.score }}</td>
+            <td>{{ d.wasting_2015.score }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">    
+    <h3 class="large-12 columns">{{ country_evolution_detail }}</h3>
+  </div>
+  <div class="row">
+    <div class="medium-6 small-12 columns">
+      <div>
+        <h4>{{ m.country_score_undernourished }}</h4>
+        <canvas id="chart-undernourished" width="auto" height="250px"></canvas>
+      </div>
+    </div>
+    <div class="medium-6 small-12 columns">
+    <div>
+      <h4>{{ m.country_score_stunting }}</h4>
+      <canvas id="chart-stunting" width="auto" height="250px"></canvas>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 small-12 columns">
+      <div>
+        <h4>{{ m.country_score_mortality }}</h4>
+        <canvas id="chart-mortality" width="auto" height="250px"></canvas>
+      </div>
+    </div>
+    <div class="medium-6 small-12 columns">
+      <div>     
+        <h4>{{ m.country_score_wasting }}</h4>
+        <canvas id="chart-wasting" width="auto" height="250px"></canvas>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+{% endblock %}

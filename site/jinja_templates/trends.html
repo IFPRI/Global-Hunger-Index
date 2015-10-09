@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<link rel="stylesheet" href="{{ relpath }}styles/responsive.dataTables.min.css" media="screen">
+
+<script src="{{ relpath }}scripts/jquery.dataTables.js"></script>
+<script src="{{ relpath }}scripts/dataTables.responsive.min.js"></script>
+<script src="{{ relpath }}scripts/trends.js"></script>
+{% endblock %}
+
+{% block content %}
+
+  <section id="trends-content" class="spaced-row">
+    <div class="row">
+      <h1 class="large-12 columns">Trends of Hunger</h1>
+    </div>
+    
+    <table id="trends-table">
+      <thead>
+        <tr>
+          <th>{{ m.country }}</th>
+          <th>{{ m.country_score_undernourished }}</th>
+          <th>{{ m.country_score_stunting }}</th>
+          <th>{{ m.country_score_wasting }}</th>
+          <th>{{ m.country_score_mortality }}</th>
+          <th>{{ m.zone }}</th>
+          <th>{{ m.map_score }}</th>
+        </tr>
+      </thead>
+    </table>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="trends-footnote">* {{ m.ifpri_estimate }}</p> 
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
