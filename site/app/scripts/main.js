@@ -80,7 +80,8 @@ var messages_de = {
   });
   map.addControl(new L.Control.ZoomMin());
 
-  new L.tileLayer('http://a{s}.acetate.geoiq.com/tiles/acetate-base/{z}/{x}/{y}.png', {
+  // new L.tileLayer('http://a{s}.acetate.geoiq.com/tiles/acetate-base/{z}/{x}/{y}.png', {
+  new L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png', {
       subdomains: '0123',
       }).addTo(map);
 
@@ -131,16 +132,19 @@ var messages_de = {
     // set up popups
     var url = window.location.href;
     var m;
+    var name;
     var level;
     if (url.indexOf('/de') > -1) {
       m = messages_de;
+      name = feature.properties.name_de;
       level = getSeverity(feature.properties.score, 'de');
     } else {
       m = messages_en;
+      name = feature.properties.name;
       level = getSeverity(feature.properties.score, 'en');
     }
 
-    var popupContent = '<h4 id=' + feature.id + '>' + feature.properties.name + '</h4>';
+    var popupContent = '<h4 id=' + feature.id + '>' + name + '</h4>';
 
     if (feature.properties.score === '-') {
       popupContent += '<p><strong>' + m.insuf_data + '</strong></p>';
@@ -153,7 +157,7 @@ var messages_de = {
 
     if (feature.properties.score !== 'nc') {
       if (url.indexOf('embed') > -1) {
-        popupContent += '<p><a class="button small radius" target="_blank" href="countries/' + feature.id + '">' + m.findout + '</a></p>';
+        popupContent += '<p><a class="button small radius" target="_blank" href="../countries/' + feature.id + '">' + m.findout + '</a></p>';
       } else {
         popupContent += '<p><a class="button small radius" href="countries/' + feature.id + '">' + m.findout + '</a></p>';
       }
@@ -172,12 +176,14 @@ var messages_de = {
   }
 
   // https://gis.stackexchange.com/a/102125
-  var jsonfile;
-  if (window.location.href.indexOf('/de') > -1) {
-    jsonfile = '../data/countrydata-2015.geo.json';
-  } else {
-    jsonfile = 'data/countrydata-2015.geo.json';
+  var urlbase = '';
+  if (window.location.href.indexOf('de/') > -1) {
+    urlbase += '../';
   }
+  if (window.location.href.indexOf('embed') > -1) {
+    urlbase += '../';
+  }
+  var jsonfile = urlbase + 'data/countrydata-2015.geo.json';
   geojsonLayer = new L.GeoJSON.AJAX(jsonfile, {
     style: style,
     onEachFeature: onEachFeature
@@ -194,21 +200,29 @@ var messages_de = {
 
   function populateTable(year) {
     // reload table
-    var jsonroot;
+    var urlbase = '';
     if (window.location.href.indexOf('/de') > -1) {
-      jsonroot = '../data/countrydata-';
-    } else {
-      jsonroot = 'data/countrydata-';
+      urlbase += '../';
     }
+    if (window.location.href.indexOf('embed') > -1) {
+      urlbase += '../';
+    }
+    var jsonroot = urlbase + 'data/countrydata-';
     $.getJSON( jsonroot + year + '.geo.json', function( data ) {
       $('#country-table tbody').empty();
       $.each( data.features, function( key, c ) {
+        var name;
+        if (window.location.href.indexOf('/de') > -1) {
+          name = c.properties.name_de;
+        } else {
+          name = c.properties.name;
+        }
         if (c.properties.score !== 'nc' && c.properties.score !== '-') {
           $('<tr>').attr('id', 'table-' + c.id)
             .attr('class', getSeverityClass(c.properties.score))
             .attr('role', 'row')
             .append(
-                $('<td class="name">').text(c.properties.name).wrapInner('<span />'),
+                $('<td class="name">').text(name).wrapInner('<span />'),
                 $('<td class="score">').text(c.properties.score).wrapInner('<span />')
                 ).appendTo('#country-table');
         }
@@ -240,11 +254,18 @@ var messages_de = {
   }
 
   $(document).ready(function() {    
+    if (window.location.href.indexOf('/de') > -1) {
+      urlbase += '../';
+    }
+    if (window.location.href.indexOf('embed') > -1) {
+      urlbase += '../';
+    }
     populateTable('2015');
     $('#year-drop li a').click( function() {
       // year dropdown refreshes map
       var year = this.className;
-      geojsonLayer.clearLayers();geojsonLayer = new L.GeoJSON.AJAX('data/countrydata-' + year + '.geo.json', {
+      var jsonroot = urlbase + 'data/countrydata-';
+      geojsonLayer.clearLayers();geojsonLayer = new L.GeoJSON.AJAX(jsonroot + year + '.geo.json', {
         style: style,
         onEachFeature: onEachFeature
       });       

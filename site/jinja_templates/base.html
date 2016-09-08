@@ -8,8 +8,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Global Hunger Index</title>
-  <meta name="description" content="The Global Hunger Index (GHI) is a tool designed to comprehensively measure and track hunger globally, regionally, and by country. Each year, the International Food Policy Research Institute (IFPRI) calculates GHI scores in order to assess progress, or the lack thereof, in decreasing hunger. The GHI is designed to raise awareness and understanding of regional and country differences in the struggle against hunger. By calling attention to the issue, we hope that the GHI will trigger action to reduce hunger around the world.">
+  <title>{{ m.name }}</title>
+  <meta name="description" content="{{ m.share_description_head_text }}">
 
   <link rel="stylesheet" href="{{ relpath }}styles/leaflet.css">    
   <link rel="stylesheet" href="{{ relpath }}fonts/foundation-icons/foundation-icons.css" />    
@@ -18,16 +18,24 @@
 
   <script src="{{ relpath }}scripts/modernizr.js"></script>
   
-  <meta property="og:title" content="Global Hunger Index 2015" />
-  <meta property="og:description" content="The Global Hunger Index (GHI) is a tool designed to comprehensively measure and track hunger globally, regionally, and by country. Each year, the International Food Policy Research Institute (IFPRI) calculates GHI scores in order to assess progress, or the lack thereof, in decreasing hunger. The GHI is designed to raise awareness and understanding of regional and country differences in the struggle against hunger. By calling attention to the issue, we hope that the GHI will trigger action to reduce hunger around the world." />
-  <meta property="og:url" content="http://ghi.ifpri.org" />
-  <meta property="og:url" content="http://ghi.ifpri.org/images/share.png" />
+  <meta property="og:title" content="{{ m.name }}" />
+  <meta property="og:description" content="{{ m.share_description_head_text }}" />
+  <meta property="og:url" content="{{ m.localized_share_url }}" />
+  {% if lang == 'de' %}
+    <meta property="og:image" content="http://ghi.ifpri.org/images/share-de.png" />
+  {% else %}
+    <meta property="og:image" content="http://ghi.ifpri.org/images/share.png" />
+  {% endif %}
   
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Global Hunger Index 2015" />
-  <meta name="twitter:description" content="The Global Hunger Index (GHI) is a tool designed to comprehensively measure and track hunger globally, regionally, and by country. Each year, the International Food Policy Research Institute (IFPRI) calculates GHI scores in order to assess progress, or the lack thereof, in decreasing hunger. The GHI is designed to raise awareness and understanding of regional and country differences in the struggle against hunger. By calling attention to the issue, we hope that the GHI will trigger action to reduce hunger around the world." />
-  <meta name="twitter:image" content="http://ghi.ifpri.org/images/share.png" />
-  <meta name="twitter:url" content="http://ghi.ifpri.org" />
+  <meta name="twitter:title" content="{{ m.name }}" />
+  <meta name="twitter:description" content="{{ m.share_description_head_text }}" />
+  <meta name="twitter:url" content="{{ m.localized_share_url }}" />
+  {% if lang == 'de' %}
+    <meta property="twitter:image" content="http://ghi.ifpri.org/images/share-de.png" />
+  {% else %}
+    <meta property="twitter:image" content="http://ghi.ifpri.org/images/share.png" />
+  {% endif %}
 
 
   <link rel="apple-touch-icon" sizes="57x57" href="{{ relpath }}images/apple-touch-icon-57x57.png">
@@ -49,13 +57,16 @@
   <link rel="icon" sizes="16x16" href="{{ relpath }}images/favicon.ico">
 </head>
 <body>
-  <!-- For nomad URL preview -->
-  <img src="{{ relpath }}images/ghi-share.png" class="hide">
+  {% if lang == 'de' %}
+    <img src="{{ relpath }}images/ghi-share-de.png" class="hide">
+  {% else %}
+    <img src="{{ relpath }}images/ghi-share.png" class="hide">
+  {% endif %}
 
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="{{ linkrelpath }}/">
+        <h1><a href="{{ linkrelpath }}">
             <img src="{{ relpath }}images/ghi.svg" onerror="this.src='{{ relpath }}images/ghi.png'" alt="{{ m.name }}">
             <span>{{ m.name }}</span>
           </a></h1>
@@ -67,16 +78,17 @@
       <ul class="right">
         <li class="has-dropdown"> <a href="#">{{ m.menu_language }}</a>
           <ul class="dropdown">
-            <li class="active"><a href="{{ relpath }}">{{ m.menu_english }}</a></li>
-            <li><a href="{{ relpath }}de/">{{ m.menu_german }}</a></li>
+            <li{% if lang != "de" %} class="active"{% endif %}><a href="{{ relpath }}">{{ m.menu_english }}</a></li>
+            <li{% if lang == "de" %} class="active"{% endif %}><a href="{{ relpath }}de/">{{ m.menu_german }}</a></li>
           </ul>
         </li>
       </ul>
       <!-- Left Nav Section -->
       <ul class="left">
         <li{% if page_name == "trends" %} class="active"{% endif %}><a href="{{ linkrelpath }}trends/">{{ m.menu_trends }}</a></li>
-        <li{% if page_name == "methodology" %} class="active"{% endif %}><a href="{{ linkrelpath }}methodology/">{{ m.block_methodology_title }}</a></li>
         <li{% if page_name == "results" %} class="active"{% endif %}><a href="{{ linkrelpath }}results/">{{ m.block_results_title }}</a></li>
+        <li{% if page_name == "methodology" %} class="active"{% endif %}><a href="{{ linkrelpath }}methodology/">{{ m.block_methodology_title }}</a></li>
+        <li{% if page_name == "hunger" %} class="active"{% endif %}><a href="{{ linkrelpath }}hunger/">{{ m.block_hunger_title }}</a></li>
         <li{% if page_name == "about" %} class="active"{% endif %}><a href="{{ linkrelpath }}about/">{{ m.block_about_title }}</a></li>
         <li{% if page_name == "contact" %} class="active"{% endif %}><a href="{{ linkrelpath }}contact/">{{ m.block_contact_title }}</a></li>
       </ul>
@@ -114,5 +126,15 @@
   <!-- build:js scripts/main.js -->
   {% block scripts %}{% endblock %}
   <!-- endbuild -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-35984661-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+
 </body>
 </html>

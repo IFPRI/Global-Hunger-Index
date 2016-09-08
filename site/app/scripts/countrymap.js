@@ -67,7 +67,8 @@ var messages_de = {
   });
   // map.addControl(new L.Control.ZoomMin())
 
-  new L.tileLayer('http://a{s}.acetate.geoiq.com/tiles/acetate-base/{z}/{x}/{y}.png', {
+  //new L.tileLayer('http://a{s}.acetate.geoiq.com/tiles/acetate-base/{z}/{x}/{y}.png', {
+  new L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png', {
       subdomains: '0123',
       }).addTo(map);
 
@@ -113,15 +114,18 @@ var messages_de = {
     // set up popups
     var url = window.location.href;
     var m;
+    var name;
     var level;
     if (url.indexOf('/de') > -1) {
       m = messages_de;
+      name = feature.properties.name_de;
       level = getSeverity(feature.properties.score, 'de');
     } else {
       m = messages_en;
+      name = feature.properties.name;
       level = getSeverity(feature.properties.score, 'en');
     }
-    var popupContent = '<h4 id=' + feature.id + '>' + feature.properties.name + '</h4>';
+    var popupContent = '<h4 id=' + feature.id + '>' + name + '</h4>';
 
     if (feature.properties.score === '-') {
       popupContent += '<p><strong>' + m.insuf_data + '</strong></p>';

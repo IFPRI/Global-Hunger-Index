@@ -126,46 +126,50 @@ body {
         }
     .large-4 {
         height: 100%;
-        #table-container {
-            height: 463px;
-            overflow-y: scroll;
-            border-top: 1px solid #ccc;
-            #country-table {
-            	margin-bottom: 0; border: 0;
-		        
-		        tr:hover { cursor: pointer; background: #eee; }
-		        tr.highlight { background: #ccc; }
-		        tr td { padding: 0.5625rem 0.9375rem; }
-        		td span { padding: 0.25rem 0.5rem; }
-        		td.score span {
-				    font-size: 0.75rem;
-				    font-weight: bold;
-				    @include border-radius(4px);
-				    background-color: #f9f9f9;
-				    display: inline-block;
-					text-align: center;
-					width: 2.5rem;
-				    }
-				.extra-alarming td.score span { background-color: $alarming-red; }
-				.alarming td.score span       { background-color: $alarming-orange; }
-				.serious td.score span        { background-color: $serious-light-orange; }
-				.moderate td.score span       { background-color: $moderate-light-green; }
-				.low td.score span            { background-color: $low-green; }
-				.no-data td.score span        { background-color: $nodata-grey; }
-				.indust-country td.score span { background-color: $notcalculated-grey; }
-				}    
+        #table-container { height: 463px; }
+        }
+}
+
+.table-wrapper {
+    #table-container {
+        height: 100%;
+        overflow-y: scroll;
+        border-top: 1px solid #ccc;
+        #country-table {
+        	margin-bottom: 0; border: 0;
+	        
+	        tr:hover { cursor: pointer; background: #eee; }
+	        tr.highlight { background: #ccc; }
+	        tr td { padding: 0.5625rem 0.9375rem; }
+    		td span { padding: 0.25rem 0.5rem; }
+    		td.score span {
+			    font-size: 0.75rem;
+			    font-weight: bold;
+			    @include border-radius(4px);
+			    background-color: #f9f9f9;
+			    display: inline-block;
+				text-align: center;
+				width: 2.5rem;
+			    }
+			.extra-alarming td.score span { background-color: $alarming-red; }
+			.alarming td.score span       { background-color: $alarming-orange; }
+			.serious td.score span        { background-color: $serious-light-orange; }
+			.moderate td.score span       { background-color: $moderate-light-green; }
+			.low td.score span            { background-color: $low-green; }
+			.no-data td.score span        { background-color: $nodata-grey; }
+			.indust-country td.score span { background-color: $notcalculated-grey; }
+			}    
+        }
+    .row {
+        padding: 0.5rem 0 0;
+        .large-12 > strong {
+            font-size: 1.6875rem;
+            font-family: $font-family-sans-serif-narrow;
             }
-        .row {
-            padding: 0.5rem 0 0;
-            .large-12 > strong {
-                font-size: 1.6875rem;
-                font-family: $font-family-sans-serif-narrow;
-                }
-            p {
-                font-size: 0.875rem;
-                margin-bottom: 0;
-                padding-right: 0;
-                }
+        p {
+            font-size: 0.875rem;
+            margin-bottom: 0;
+            padding-right: 0;
             }
         }
 }
@@ -256,9 +260,6 @@ body {
         }
 }
 
-#map-legend {
-}
-
 .ghi-levels {
     padding: 0.5rem 0;
     margin: 0;
@@ -339,7 +340,6 @@ body {
     }
 }
 
-
 /* Country page
 */
 
@@ -383,6 +383,20 @@ body {
         max-width: 100%;
         margin-bottom: 1rem;
         }
+     
+    #chart-score { height: 250px; }
+       
+    .chart-wrapper {
+        margin-bottom: 1rem;
+        
+        #chart-undernourished,
+        #chart-wasting,
+        #chart-stunting,
+        #chart-mortality {
+            box-sizing: border-box;
+            padding-right: 1rem;
+            }
+    }
 }
 
 #country-info.extra-alarming {
@@ -471,12 +485,8 @@ body {
             max-width: 100%;
             width: 100% !important;
             }
-        thead th:nth-child(6),
-        tbody td:nth-child(6) { display: none; }
-        
         }
 }
-
 
 /* Static pages
 */
@@ -504,12 +514,6 @@ body {
             
     }
 }
-
-
-/* Trends page
-*/
-
-
 
 /* Footer
 */
@@ -545,11 +549,19 @@ body {
 
 #embed-map {
     height: 100%;
+    position: relative;
+    
+    .table-wrapper {
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        #table-container { height: 100%; }
+        }
     
     .map-wrapper {
+        height: 100%; 
         position: relative;
-        height: 100%;
-        
+    
         #map-application,
         #map-application .map { height: 100%; padding: 0; }
         
@@ -640,8 +652,8 @@ body {
         }
     #main-map .large-4 #table-container { height: 260px; }
     #main-map { -webkit-overflow-scrolling: touch; }
-    
-    #main-map .large-4 { @include box-shadow(0, 0, 0, 0, transparent); }
+   
+    #main-map .large-4 { @include box-shadow(0, 0, 0, 0, transparent); } 
 }
 
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
@@ -658,11 +670,6 @@ body {
     .ghi-levels li.indust-countries { width: 15.2857%; }
     .ghi-levels li.no-data { width: 11.2857%; }
     
-    
     #home-blocks a.columns div { min-height: 8rem; }
 }
 
-
-#chart-score {
-  height: 250px;
-}

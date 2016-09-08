@@ -23,3 +23,7 @@ deploy:
 clean:
 	rm -fr site/dist
 
+live:
+	command cp -r site/dist/* ../Global-Hunger-Index
+	cd ../Global-Hunger-Index; git add .; git commit -m "New live version"; git push origin gh-pages
+

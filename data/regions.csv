@@ -1,132 +1,132 @@
-"code","country","region","subregion","zonecode","zone"
-"BHR","Bahrain","MENA","ME","MENA","Near East and North Africa"
-"LBY","Libya","MENA","NA","MENA","Near East and North Africa"
-"QAT","Qatar","MENA","ME","MENA","Near East and North Africa"
-"SYR","Syrian Arab Republic","MENA","ME","MENA","Near East and North Africa"
-"OMN","Oman","MENA","ME","MENA","Near East and North Africa"
-"YEM","Yemen, Rep.","MENA","ME","MENA","Near East and North Africa"
-"IRQ","Iraq","MENA","ME","MENA","Near East and North Africa"
-"EGY","Egypt, Arab Rep.","MENA","NA","MENA","Near East and North Africa"
-"MAR","Morocco","MENA","NA","MENA","Near East and North Africa"
-"DZA","Algeria","MENA","NA","MENA","Near East and North Africa"
-"IRN","Iran, Islamic Rep.","MENA","ME","MENA","Near East and North Africa"
-"LBN","Lebanon","MENA","ME","MENA","Near East and North Africa"
-"JOR","Jordan","MENA","ME","MENA","Near East and North Africa"
-"TUN","Tunisia","MENA","NA","MENA","Near East and North Africa"
-"SAU","Saudi Arabia","MENA","ME","MENA","Near East and North Africa"
-"TUR","Turkey","MENA","ME","MENA","Near East and North Africa"
-"KWT","Kuwait","MENA","ME","MENA","Near East and North Africa"
-"SLE","Sierra Leone","SSA","WAF","WAF","West Africa"
-"NER","Niger","SSA","WAF","WAF","West Africa"
-"NGA","Nigeria","SSA","WAF","WAF","West Africa"
-"BFA","Burkina Faso","SSA","WAF","WAF","West Africa"
-"LBR","Liberia","SSA","WAF","WAF","West Africa"
-"GNB","Guinea-Bissau","SSA","WAF","WAF","West Africa"
-"MLI","Mali","SSA","WAF","WAF","West Africa"
-"GIN","Guinea","SSA","WAF","WAF","West Africa"
-"CIV","Côte d'Ivoire","SSA","WAF","WAF","West Africa"
-"SEN","Senegal","SSA","WAF","WAF","West Africa"
-"TGO","Togo","SSA","WAF","WAF","West Africa"
-"MRT","Mauritania","SSA","WAF","WAF","West Africa"
-"BEN","Benin","SSA","WAF","WAF","West Africa"
-"GMB","Gambia, The","SSA","WAF","WAF","West Africa"
-"GHA","Ghana","SSA","WAF","WAF","West Africa"
-"COD","Congo, Dem. Rep.","SSA","CAF","CSAF","Central and Southern Africa"
-"CAF","Central African Republic","SSA","CAF","CSAF","Central and Southern Africa"
-"TCD","Chad","SSA","CAF","CSAF","Central and Southern Africa"
-"AGO","Angola","SSA","CAF","CSAF","Central and Southern Africa"
-"NAM","Namibia","SSA","SAF","CSAF","Central and Southern Africa"
-"COG","Congo, Rep.","SSA","CAF","CSAF","Central and Southern Africa"
-"SWZ","Swaziland","SSA","SAF","CSAF","Central and Southern Africa"
-"CMR","Cameroon","SSA","CAF","CSAF","Central and Southern Africa"
-"LSO","Lesotho","SSA","SAF","CSAF","Central and Southern Africa"
-"BWA","Botswana","SSA","SAF","CSAF","Central and Southern Africa"
-"GAB","Gabon","SSA","CAF","CSAF","Central and Southern Africa"
-"ZAF","South Africa","SSA","SAF","CSAF","Central and Southern Africa"
-"BDI","Burundi","SSA","EAF","EAF","East Africa"
-"COM","Comoros","SSA","EAF","EAF","East Africa"
-"ERI","Eritrea","SSA","EAF","EAF","East Africa"
-"SOM","Somalia","SSA","EAF","EAF","East Africa"
-"SSD","South Sudan","SSA","EAF","EAF","East Africa"
-"SDN","Sudan","SSA","EAF","EAF","East Africa"
-"ZMB","Zambia","SSA","EAF","EAF","East Africa"
-"MDG","Madagascar","SSA","EAF","EAF","East Africa"
-"ETH","Ethiopia","SSA","EAF","EAF","East Africa"
-"DJI","Djibouti","SSA","EAF","EAF","East Africa"
-"MOZ","Mozambique","SSA","EAF","EAF","East Africa"
-"ZWE","Zimbabwe","SSA","EAF","EAF","East Africa"
-"RWA","Rwanda","SSA","EAF","EAF","East Africa"
-"TZA","Tanzania","SSA","EAF","EAF","East Africa"
-"UGA","Uganda","SSA","EAF","EAF","East Africa"
-"MWI","Malawi","SSA","EAF","EAF","East Africa"
-"KEN","Kenya","SSA","EAF","EAF","East Africa"
-"MUS","Mauritius","SSA","EAF","EAF","East Africa"
-"BOL","Bolivia","LAC","LA","SA","South America"
-"GUY","Guyana","LAC","LA","SA","South America"
-"ECU","Ecuador","LAC","LA","SA","South America"
-"PRY","Paraguay","LAC","LA","SA","South America"
-"SUR","Suriname","LAC","LA","SA","South America"
-"PER","Peru","LAC","LA","SA","South America"
-"COL","Colombia","LAC","LA","SA","South America"
-"TTO","Trinidad & Tobago","LAC","LA","SA","South America"
-"VEN","Venezuela, RB","LAC","LA","SA","South America"
-"URY","Uruguay","LAC","LA","SA","South America"
-"BRA","Brazil","LAC","LA","SA","South America"
-"ARG","Argentina","LAC","LA","SA","South America"
-"CHL","Chile","LAC","LA","SA","South America"
-"HTI","Haiti","LAC","CAR","CAR","Central America and the Caribbean"
-"GTM","Guatemala","LAC","CAR","CAR","Central America and the Caribbean"
-"NIC","Nicaragua","LAC","CAR","CAR","Central America and the Caribbean"
-"HND","Honduras","LAC","CAR","CAR","Central America and the Caribbean"
-"SLV","El Salvador","LAC","CAR","CAR","Central America and the Caribbean"
-"DOM","Dominican Republic","LAC","CAR","CAR","Central America and the Caribbean"
-"PAN","Panama","LAC","CAR","CAR","Central America and the Caribbean"
-"JAM","Jamaica","LAC","CAR","CAR","Central America and the Caribbean"
-"MEX","Mexico","LAC","CAR","CAR","Central America and the Caribbean"
-"CRI","Costa Rica","LAC","CAR","CAR","Central America and the Caribbean"
-"CUB","Cuba","LAC","CAR","CAR","Central America and the Caribbean"
-"BTN","Bhutan","SA","SA","SEA","South, East, and Southeast Asia"
-"PNG","Papua New Guinea","SEA","SEA","SEA","South, East, and Southeast Asia"
-"TLS","Timor-Leste","SEA","SEA","SEA","South, East, and Southeast Asia"
-"AFG","Afghanistan","SA","SA","SEA","South, East, and Southeast Asia"
-"PAK","Pakistan","SA","SA","SEA","South, East, and Southeast Asia"
-"IND","India","SA","SA","SEA","South, East, and Southeast Asia"
-"PRK","North Korea","SEA","EA","SEA","South, East, and Southeast Asia"
-"LAO","Lao PDR","SEA","SEA","SEA","South, East, and Southeast Asia"
-"BGD","Bangladesh","SA","SA","SEA","South, East, and Southeast Asia"
-"LKA","Sri Lanka","SA","SA","SEA","South, East, and Southeast Asia"
-"MMR","Myanmar","SEA","EA","SEA","South, East, and Southeast Asia"
-"KHM","Cambodia","SEA","SEA","SEA","South, East, and Southeast Asia"
-"NPL","Nepal","SA","SA","SEA","South, East, and Southeast Asia"
-"IDN","Indonesia","SEA","SEA","SEA","South, East, and Southeast Asia"
-"PHL","Philippines","SEA","SEA","SEA","South, East, and Southeast Asia"
-"MNG","Mongolia","SEA","EA","SEA","South, East, and Southeast Asia"
-"VNM","Vietnam","SEA","SEA","SEA","South, East, and Southeast Asia"
-"THA","Thailand","SEA","SEA","SEA","South, East, and Southeast Asia"
-"MYS","Malaysia","SEA","SEA","SEA","South, East, and Southeast Asia"
-"FJI","Fiji","SEA","SEA","SEA","South, East, and Southeast Asia"
-"CHN","China","SEA","EA","SEA","South, East, and Southeast Asia"
-"TJK","Tajikistan","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"UZB","Uzbekistan","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"ALB","Albania","EEFSU","EE","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"TKM","Turkmenistan","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"ARM","Armenia","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"AZE","Azerbaijan","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"KGZ","Kyrgyz Republic","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"MDA","Moldova","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"BGR","Bulgaria","EEFSU","EE","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"GEO","Georgia","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"KAZ","Kazakhstan","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"SRB","Serbia","EEFSU","EE","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"RUS","Russian Federation","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"MKD","Macedonia, FYR","EEFSU","EE","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"ROU","Romania","EEFSU","EE","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"SVK","Slovak Republic","EEFSU","EE","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"BIH","Bosnia & Herzegovina","EEFSU","EE","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"MNE","Montenegro","EEFSU","EE","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"UKR","Ukraine","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"LVA","Latvia","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"EST","Estonia","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"LTU","Lithuania","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"BLR","Belarus","EEFSU","FSU","EEFSU","Eastern Europe and the Commonwealth of Independent States"
-"HRV","Croatia","EEFSU","EE","EEFSU","Eastern Europe and the Commonwealth of Independent States"
+code,country,region,subregion,zonecode,zone,zone_de
+BHR,Bahrain,MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+LBY,Libya,MENA,NA,MENA,Near East and North Africa,Naher Osten und Nordafrika
+QAT,Qatar,MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+SYR,Syrian Arab Republic,MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+OMN,Oman,MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+YEM,"Yemen, Rep.",MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+IRQ,Iraq,MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+EGY,"Egypt, Arab Rep.",MENA,NA,MENA,Near East and North Africa,Naher Osten und Nordafrika
+MAR,Morocco,MENA,NA,MENA,Near East and North Africa,Naher Osten und Nordafrika
+DZA,Algeria,MENA,NA,MENA,Near East and North Africa,Naher Osten und Nordafrika
+IRN,"Iran, Islamic Rep.",MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+LBN,Lebanon,MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+JOR,Jordan,MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+TUN,Tunisia,MENA,NA,MENA,Near East and North Africa,Naher Osten und Nordafrika
+SAU,Saudi Arabia,MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+TUR,Turkey,MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+KWT,Kuwait,MENA,ME,MENA,Near East and North Africa,Naher Osten und Nordafrika
+SLE,Sierra Leone,SSA,WAF,WAF,West Africa,West-Afrika
+NER,Niger,SSA,WAF,WAF,West Africa,West-Afrika
+NGA,Nigeria,SSA,WAF,WAF,West Africa,West-Afrika
+BFA,Burkina Faso,SSA,WAF,WAF,West Africa,West-Afrika
+LBR,Liberia,SSA,WAF,WAF,West Africa,West-Afrika
+GNB,Guinea-Bissau,SSA,WAF,WAF,West Africa,West-Afrika
+MLI,Mali,SSA,WAF,WAF,West Africa,West-Afrika
+GIN,Guinea,SSA,WAF,WAF,West Africa,West-Afrika
+CIV,Côte d'Ivoire,SSA,WAF,WAF,West Africa,West-Afrika
+SEN,Senegal,SSA,WAF,WAF,West Africa,West-Afrika
+TGO,Togo,SSA,WAF,WAF,West Africa,West-Afrika
+MRT,Mauritania,SSA,WAF,WAF,West Africa,West-Afrika
+BEN,Benin,SSA,WAF,WAF,West Africa,West-Afrika
+GMB,"Gambia, The",SSA,WAF,WAF,West Africa,West-Afrika
+GHA,Ghana,SSA,WAF,WAF,West Africa,West-Afrika
+COD,"Congo, Dem. Rep.",SSA,CAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+CAF,Central African Republic,SSA,CAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+TCD,Chad,SSA,CAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+AGO,Angola,SSA,CAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+NAM,Namibia,SSA,SAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+COG,"Congo, Rep.",SSA,CAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+SWZ,Swaziland,SSA,SAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+CMR,Cameroon,SSA,CAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+LSO,Lesotho,SSA,SAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+BWA,Botswana,SSA,SAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+GAB,Gabon,SSA,CAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+ZAF,South Africa,SSA,SAF,CSAF,Central and Southern Africa,Zentral- und Südafrika
+BDI,Burundi,SSA,EAF,EAF,East Africa,Ostafrika
+COM,Comoros,SSA,EAF,EAF,East Africa,Ostafrika
+ERI,Eritrea,SSA,EAF,EAF,East Africa,Ostafrika
+SOM,Somalia,SSA,EAF,EAF,East Africa,Ostafrika
+SSD,South Sudan,SSA,EAF,EAF,East Africa,Ostafrika
+SDN,Sudan,SSA,EAF,EAF,East Africa,Ostafrika
+ZMB,Zambia,SSA,EAF,EAF,East Africa,Ostafrika
+MDG,Madagascar,SSA,EAF,EAF,East Africa,Ostafrika
+ETH,Ethiopia,SSA,EAF,EAF,East Africa,Ostafrika
+DJI,Djibouti,SSA,EAF,EAF,East Africa,Ostafrika
+MOZ,Mozambique,SSA,EAF,EAF,East Africa,Ostafrika
+ZWE,Zimbabwe,SSA,EAF,EAF,East Africa,Ostafrika
+RWA,Rwanda,SSA,EAF,EAF,East Africa,Ostafrika
+TZA,Tanzania,SSA,EAF,EAF,East Africa,Ostafrika
+UGA,Uganda,SSA,EAF,EAF,East Africa,Ostafrika
+MWI,Malawi,SSA,EAF,EAF,East Africa,Ostafrika
+KEN,Kenya,SSA,EAF,EAF,East Africa,Ostafrika
+MUS,Mauritius,SSA,EAF,EAF,East Africa,Ostafrika
+BOL,Bolivia,LAC,LA,SA,South America,Südamerika
+GUY,Guyana,LAC,LA,SA,South America,Südamerika
+ECU,Ecuador,LAC,LA,SA,South America,Südamerika
+PRY,Paraguay,LAC,LA,SA,South America,Südamerika
+SUR,Suriname,LAC,LA,SA,South America,Südamerika
+PER,Peru,LAC,LA,SA,South America,Südamerika
+COL,Colombia,LAC,LA,SA,South America,Südamerika
+TTO,Trinidad & Tobago,LAC,LA,SA,South America,Südamerika
+VEN,"Venezuela, RB",LAC,LA,SA,South America,Südamerika
+URY,Uruguay,LAC,LA,SA,South America,Südamerika
+BRA,Brazil,LAC,LA,SA,South America,Südamerika
+ARG,Argentina,LAC,LA,SA,South America,Südamerika
+CHL,Chile,LAC,LA,SA,South America,Südamerika
+HTI,Haiti,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+GTM,Guatemala,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+NIC,Nicaragua,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+HND,Honduras,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+SLV,El Salvador,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+DOM,Dominican Republic,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+PAN,Panama,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+JAM,Jamaica,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+MEX,Mexico,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+CRI,Costa Rica,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+CUB,Cuba,LAC,CAR,CAR,Central America and the Caribbean,Zentralamerika und Karibik
+BTN,Bhutan,SA,SA,SEA,"South, East, and Southeast Asia",Südostasien
+PNG,Papua New Guinea,SEA,SEA,SEA,"South, East, and Southeast Asia",Südostasien
+TLS,Timor-Leste,SEA,SEA,SEA,"South, East, and Southeast Asia",Südostasien
+AFG,Afghanistan,SA,SA,SEA,"South, East, and Southeast Asia",Südostasien
+PAK,Pakistan,SA,SA,SEA,"South, East, and Southeast Asia",Südostasien
+IND,India,SA,SA,SEA,"South, East, and Southeast Asia",Südostasien
+PRK,North Korea,SEA,EA,SEA,"South, East, and Southeast Asia",Südostasien
+LAO,Lao PDR,SEA,SEA,SEA,"South, East, and Southeast Asia",Südostasien
+BGD,Bangladesh,SA,SA,SEA,"South, East, and Southeast Asia",Südostasien
+LKA,Sri Lanka,SA,SA,SEA,"South, East, and Southeast Asia",Südostasien
+MMR,Myanmar,SEA,EA,SEA,"South, East, and Southeast Asia",Südostasien
+KHM,Cambodia,SEA,SEA,SEA,"South, East, and Southeast Asia",Südostasien
+NPL,Nepal,SA,SA,SEA,"South, East, and Southeast Asia",Südostasien
+IDN,Indonesia,SEA,SEA,SEA,"South, East, and Southeast Asia",Südostasien
+PHL,Philippines,SEA,SEA,SEA,"South, East, and Southeast Asia",Südostasien
+MNG,Mongolia,SEA,EA,SEA,"South, East, and Southeast Asia",Südostasien
+VNM,Vietnam,SEA,SEA,SEA,"South, East, and Southeast Asia",Südostasien
+THA,Thailand,SEA,SEA,SEA,"South, East, and Southeast Asia",Südostasien
+MYS,Malaysia,SEA,SEA,SEA,"South, East, and Southeast Asia",Südostasien
+FJI,Fiji,SEA,SEA,SEA,"South, East, and Southeast Asia",Südostasien
+CHN,China,SEA,EA,SEA,"South, East, and Southeast Asia",Südostasien
+TJK,Tajikistan,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+UZB,Uzbekistan,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+ALB,Albania,EEFSU,EE,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+TKM,Turkmenistan,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+ARM,Armenia,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+AZE,Azerbaijan,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+KGZ,Kyrgyz Republic,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+MDA,Moldova,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+BGR,Bulgaria,EEFSU,EE,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+GEO,Georgia,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+KAZ,Kazakhstan,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+SRB,Serbia,EEFSU,EE,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+RUS,Russian Federation,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+MKD,"Macedonia, FYR",EEFSU,EE,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+ROU,Romania,EEFSU,EE,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+SVK,Slovak Republic,EEFSU,EE,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+BIH,Bosnia & Herzegovina,EEFSU,EE,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+MNE,Montenegro,EEFSU,EE,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+UKR,Ukraine,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+LVA,Latvia,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+EST,Estonia,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+LTU,Lithuania,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+BLR,Belarus,EEFSU,FSU,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten
+HRV,Croatia,EEFSU,EE,EEFSU,Eastern Europe and the Commonwealth of Independent States,Osteuropa und Gemeinschaft Unabhängiger Staaten

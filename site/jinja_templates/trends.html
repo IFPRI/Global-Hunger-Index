@@ -18,13 +18,13 @@
     <table id="trends-table">
       <thead>
         <tr>
-          <th>{{ m.country }}</th>
-          <th>{{ m.country_score_undernourished }}</th>
-          <th>{{ m.country_score_stunting }}</th>
-          <th>{{ m.country_score_wasting }}</th>
-          <th>{{ m.country_score_mortality }}</th>
-          <th>{{ m.zone }}</th>
-          <th>{{ m.map_score }}</th>
+          <th class="all">{{ m.trends_country }}</th>
+          <th class="min-tablet">{{ m.country_score_undernourished }}</th>
+          <th class="min-tablet">{{ m.country_score_wasting }}</th>
+          <th class="min-tablet">{{ m.country_score_stunting }}</th>
+          <th class="min-tablet">{{ m.country_score_mortality }}</th>
+          <th class="never">{{ m.trends_zone }}</th>
+          <th class="all">{{ m.map_score }}</th>
         </tr>
       </thead>
     </table>

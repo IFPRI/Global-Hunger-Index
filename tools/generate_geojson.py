@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
 import json
-import csv
+import unicodecsv as csv
 import copy
 
 geodata = json.loads(open("../data/ghi-countries.geo.json", "r").read())
 scores = csv.DictReader(open("../data/ghi-scores.csv", "r"))
 ind_reader = csv.DictReader(open("../data/ghi-indicators.csv", "r"))
+country_names = csv.DictReader(open("../data/country_names.csv", "r"))
 indicators = {}
 for row in ind_reader:
     country = row['country']
@@ -15,6 +16,7 @@ for row in ind_reader:
     indicators[country] = info
 
 country_codes = [entry['id'] for entry in geodata['features']]
+german_names = {r['iso3']: r['country_name_de'] for r in country_names}
 years = [1990, 1995, 2000, 2005, 2015]
 
 for s in scores:
@@ -24,6 +26,7 @@ for s in scores:
             if entry['id'] == s['countrycode3']:
                 exists = True
                 entry['properties']['name'] = s['country']
+                entry['properties']['name_de'] = german_names[s['countrycode3']]
                 entry['properties']['score'] = {
                     'year2015': s['score2015'],
                     'year2005': s['score2005'],
@@ -49,6 +52,8 @@ for entry in geodata['features']:
             'year1995': 'nc',
             'year1990': 'nc',
         }
+    if not entry['properties'].get('name_de') and german_names.get(entry['id']):
+        entry['properties']['name_de'] = german_names[entry['id']]
 
 # divide into yearly files
 for year in years:
@@ -94,6 +99,7 @@ for entry in geodata['features']:
     country_name = entry['properties']['name']
     country_id = entry['id']
     d = {'name': country_name,
+         'name_de': entry['properties']['name_de'],
          'id': country_id,
          'score': entry['properties']['score'],
          'details': {
@@ -154,7 +160,7 @@ for year in years:
         # fill out necessary fields
         from render_templates import get_level_from_score
         entry = {
-            "country": {"name": row["name"], "id": row["id"]},
+            "country": {"name": row["name"], "name_de": row["name_de"], "id": row["id"]},
             "score": row["score"]["year" + year],
             "undernourished": row["details"]["undernourished_" + year]["score"],
             "stunting": row["details"]["stunting_" + year]["score"],
@@ -181,6 +187,3 @@ for year in years:
     f = open("../site/app/data/trends-%s.json" % year, 'w')
     f.write(json.dumps(trends_data, indent=2))
     f.close()
-
-
-
