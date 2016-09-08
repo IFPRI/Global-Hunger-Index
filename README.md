@@ -22,7 +22,11 @@ Build the project with
 processed by Gulp.  This is why the commands are run by Make and not Gulp
 (which is run by Make internally).
 
-Run a development server:
+Push the generated site to the live site at ghi.ifpri.org (remember to run `make build` first):
+
+    make live
+
+For seeing the site locally, you can also run a development server:
 
     make serve
 
