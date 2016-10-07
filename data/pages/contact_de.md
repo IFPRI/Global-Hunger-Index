@@ -1,5 +1,5 @@
 #Kontakte
-Für weitere Informationen über den Welthunger-Index 2015 wenden Sie sich bitte an:
+Für weitere Informationen über den Welthunger-Index 2016 wenden Sie sich bitte an:
 
 **International Food Policy Research Institute**  
 Pressekontakt  

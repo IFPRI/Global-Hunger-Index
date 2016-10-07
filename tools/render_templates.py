@@ -98,7 +98,7 @@ def create_index_page():
 
     table_entries = json.loads(open("../data/table_data.json", "r").read())["data"]
     for entry in table_entries:
-        entry['level'] = get_level_from_score(entry['score']['year2015'])
+        entry['level'] = get_level_from_score(entry['score']['year2016'])
 
     context = {"table_entries": table_entries,
                "m": messages,
@@ -206,8 +206,8 @@ def create_country_pages():
             scores[entry] = score
 
         scorediff = None
-        if type(scores['year2015']) == float and type(scores['year2005']) == float:
-            scorediff = scores['year2015'] - scores['year2005']
+        if type(scores['year2016']) == float and type(scores['year2008']) == float:
+            scorediff = scores['year2016'] - scores['year2008']
 
         context = {"score": scores,
                    "scorediff": scorediff,
@@ -215,8 +215,8 @@ def create_country_pages():
                    "d": country['details'],
                    "name": country['name'],
                    "m": messages,
-                   "level": get_verbose_level_from_score(scores['year2015']),
-                   "level_class": get_level_from_score(scores['year2015']),
+                   "level": get_verbose_level_from_score(scores['year2016']),
+                   "level_class": get_level_from_score(scores['year2016']),
                    "relpath": "../../",
                    "linkrelpath": "../../",
                    "lang": "en",
@@ -235,7 +235,7 @@ def create_country_pages():
         context["relpath"] = '../../../'
         context["linkrelpath"] = '../../../de/'
         context["lang"] = 'de'
-        context["level"] = get_verbose_level_from_score(scores['year2015'], lang="de")
+        context["level"] = get_verbose_level_from_score(scores['year2016'], lang="de")
         contents = template.render(**context)
         dirname = "../site/app/html/de/countries/%s/" % country_code
         if not os.path.exists(dirname):

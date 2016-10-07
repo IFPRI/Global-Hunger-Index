@@ -14,10 +14,10 @@ for row in ind_reader:
     del row['country']
     info = row
     indicators[country] = info
-
+    
 country_codes = [entry['id'] for entry in geodata['features']]
 german_names = {r['iso3']: r['country_name_de'] for r in country_names}
-years = [1990, 1995, 2000, 2005, 2015]
+years = [1992, 2000, 2008, 2016]
 
 for s in scores:
     if s['countrycode3'] in country_codes:
@@ -28,11 +28,10 @@ for s in scores:
                 entry['properties']['name'] = s['country']
                 entry['properties']['name_de'] = german_names[s['countrycode3']]
                 entry['properties']['score'] = {
-                    'year2015': s['score2015'],
-                    'year2005': s['score2005'],
+                    'year2016': s['score2016'],
+                    'year2008': s['score2008'],
                     'year2000': s['score2000'],
-                    'year1995': s['score1995'],
-                    'year1990': s['score1990'],
+                    'year1992': s['score1992'],
                 }
                 break
         if not exists:
@@ -46,11 +45,10 @@ for s in scores:
 for entry in geodata['features']:
     if not entry['properties'].get('score'):
         entry['properties']['score'] = {
-            'year2015': 'nc',
-            'year2005': 'nc',
+            'year2016': 'nc',
+            'year2008': 'nc',
             'year2000': 'nc',
-            'year1995': 'nc',
-            'year1990': 'nc',
+            'year1992': 'nc',
         }
     if not entry['properties'].get('name_de') and german_names.get(entry['id']):
         entry['properties']['name_de'] = german_names[entry['id']]
@@ -67,11 +65,12 @@ for year in years:
         if new_entry['properties']['score'] not in ('nc', '-'):
             if new_entry['properties']['score'] == "<5":
                 new_entry['properties']['score'] = 2.5
-            new_entry['properties']['score'] = float(new_entry['properties']['score'])
-        year_data['features'].append(new_entry)
+            new_entry['properties']['score'] = float(new_entry['properties']['score']) 
+        year_data['features'].append(new_entry)  
     f = open("../site/app/data/countrydata-%d.geo.json" % year, 'w')
 
-    # Sort the table by score
+   
+  # Sort the table by score
     # https://stackoverflow.com/a/73044
     year_data['features'].sort(lambda x, y: cmp(x['properties']['score'], y['properties']['score']))
     year_data['features'].reverse()
@@ -93,7 +92,7 @@ f.close()
 # table data
 table_entries = []
 for entry in geodata['features']:
-    if entry['properties']['score']['year2015'] == 'nc':
+    if entry['properties']['score']['year2016'] == 'nc':
         continue
 
     country_name = entry['properties']['name']
@@ -103,47 +102,41 @@ for entry in geodata['features']:
          'id': country_id,
          'score': entry['properties']['score'],
          'details': {
-             'undernourished_1990': {'score': indicators[country_name]['under-1990'],
-                                     'estimate': bool(indicators[country_name]['under-1990-est'])},
-             'undernourished_1995': {'score': indicators[country_name]['under-1995'],
-                                     'estimate': bool(indicators[country_name]['under-1995-est'])},
+             'undernourished_1992': {'score': indicators[country_name]['under-1992'],
+                                     'estimate': bool(indicators[country_name]['under-1992-est'])},
              'undernourished_2000': {'score': indicators[country_name]['under-2000'],
                                      'estimate': bool(indicators[country_name]['under-2000-est'])},
-             'undernourished_2005': {'score': indicators[country_name]['under-2005'],
-                                     'estimate': bool(indicators[country_name]['under-2005-est'])},
-             'undernourished_2015': {'score': indicators[country_name]['under-2015'],
-                                     'estimate': bool(indicators[country_name]['under-2015-est'])},
-             'stunting_1990': {'score': indicators[country_name]['stunting-1990'],
-                               'estimate': bool(indicators[country_name]['stunting-1990-est'])},
-             'stunting_1995': {'score': indicators[country_name]['stunting-1995'],
-                               'estimate': bool(indicators[country_name]['stunting-1995-est'])},
+             'undernourished_2008': {'score': indicators[country_name]['under-2008'],
+                                     'estimate': bool(indicators[country_name]['under-2008-est'])},
+             'undernourished_2016': {'score': indicators[country_name]['under-2016'],
+                                     'estimate': bool(indicators[country_name]['under-2016-est'])},
+             'stunting_1992': {'score': indicators[country_name]['stunting-1992'],
+                               'estimate': bool(indicators[country_name]['stunting-1992-est'])},
              'stunting_2000': {'score': indicators[country_name]['stunting-2000'],
                                'estimate': bool(indicators[country_name]['stunting-2000-est'])},
-             'stunting_2005': {'score': indicators[country_name]['stunting-2005'],
-                               'estimate': bool(indicators[country_name]['stunting-2005-est'])},
-             'stunting_2015': {'score': indicators[country_name]['stunting-2015'],
-                               'estimate': bool(indicators[country_name]['stunting-2015-est'])},
-             'wasting_1990': {'score': indicators[country_name]['wasting-1990'],
-                              'estimate': bool(indicators[country_name]['wasting-1990-est'])},
-             'wasting_1995': {'score': indicators[country_name]['wasting-1995'],
-                              'estimate': bool(indicators[country_name]['wasting-1995-est'])},
+             'stunting_2008': {'score': indicators[country_name]['stunting-2008'],
+                               'estimate': bool(indicators[country_name]['stunting-2008-est'])},
+             'stunting_2016': {'score': indicators[country_name]['stunting-2016'],
+                               'estimate': bool(indicators[country_name]['stunting-2016-est'])},
+             'wasting_1992': {'score': indicators[country_name]['wasting-1992'],
+                              'estimate': bool(indicators[country_name]['wasting-1992-est'])},
              'wasting_2000': {'score': indicators[country_name]['wasting-2000'],
                               'estimate': bool(indicators[country_name]['wasting-2000-est'])},
-             'wasting_2005': {'score': indicators[country_name]['wasting-2005'],
-                              'estimate': bool(indicators[country_name]['wasting-2005-est'])},
-             'wasting_2015': {'score': indicators[country_name]['wasting-2015'],
-                              'estimate': bool(indicators[country_name]['wasting-2015-est'])},
-             'mortality_1990': {'score': indicators[country_name]['mortality-1990']},
-             'mortality_1995': {'score': indicators[country_name]['mortality-1995']},
+             'wasting_2008': {'score': indicators[country_name]['wasting-2008'],
+                              'estimate': bool(indicators[country_name]['wasting-2008-est'])},
+             'wasting_2016': {'score': indicators[country_name]['wasting-2016'],
+                              'estimate': bool(indicators[country_name]['wasting-2016-est'])},
+             'mortality_1992': {'score': indicators[country_name]['mortality-1992']},
              'mortality_2000': {'score': indicators[country_name]['mortality-2000']},
-             'mortality_2005': {'score': indicators[country_name]['mortality-2005']},
-             'mortality_2013': {'score': indicators[country_name]['mortality-2013']},
+             'mortality_2008': {'score': indicators[country_name]['mortality-2008']},
+             'mortality_2015': {'score': indicators[country_name]['mortality-2015']},
          }}
     table_entries.append(d)
 
 table_data = {'data': table_entries}
-
+#print table_data
 f = open("../data/country-details.json", 'w')
+#f = open("../data/table_data.json", 'w')
 f.write(json.dumps(table_data, indent=2))
 f.close()
 
@@ -165,7 +158,7 @@ for year in years:
             "undernourished": row["details"]["undernourished_" + year]["score"],
             "stunting": row["details"]["stunting_" + year]["score"],
             "wasting": row["details"]["wasting_" + year]["score"],
-            "mortality": row["details"]["mortality_" + year.replace("2015", "2013")]["score"],
+            "mortality": row["details"]["mortality_" + year.replace("2016", "2015")]["score"],
         }
 
         entry["DT_RowClass"] = get_level_from_score(entry["score"])
@@ -183,7 +176,9 @@ for year in years:
 
         # add it to the entry list
         entries.append(entry)
+
     trends_data = {'data': entries}
     f = open("../site/app/data/trends-%s.json" % year, 'w')
     f.write(json.dumps(trends_data, indent=2))
     f.close()
+
