@@ -67,7 +67,7 @@ for year in years:
                 new_entry['properties']['score'] = 2.5
             new_entry['properties']['score'] = float(new_entry['properties']['score']) 
         year_data['features'].append(new_entry)  
-    f = open("../site/app/data/countrydata-%d.geo.json" % year, 'w')
+    f = open("../site/app/data/countrydata-%d.geo.json" % year, 'w+')
 
    
   # Sort the table by score
