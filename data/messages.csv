@@ -31,10 +31,10 @@ map_low,Low,Wenig
 map_no_data,No data,Keine Angaben
 map_not_calculated,Not calculated,Nicht berechnet
 country_score_data,Country data (in %),Länderdaten (in %)
-country_score_undernourished,Proportion of undernourished in population (%),Anteil unterernährter Menschen an der Bevölkerung (%)
-country_score_stunting,Prevalence of stunting in children under five years (%),Verbreitung von Wachstumsverzögerung bei Kindern unter fünf Jahren (%)
-country_score_mortality,Under five mortality rate (%),Sterblichkeitsrate bei Kindern unter fünf Jahren (%)
-country_score_wasting,Prevalence of wasting in children under five years (%),Verbreitung von Auszehrung bei Kindern unter fünf Jahren (%)
+country_score_undernourished,Proportion of undernourished in population (%),Anteil der Unterernährten an der Bevölkerung (%)
+country_score_stunting,Prevalence of stunting in children under five years (%),Anteil der ausgezehrten Kinder unter fünf Jahren (%)
+country_score_mortality,Under five mortality rate (%), Kindersterblichkeit unter fünf (%)
+country_score_wasting,Prevalence of wasting in children under five years (%), Anteil der wachstumsverzögerten Kinder unter fünf Jahren (%)
 share_title,Share,Teilen
 share_description,Share this visualization with others on your preferred social network.,Teile diese Grafik mit anderen in deinen sozialen Netzwerken
 embed_title,Embed,Einbetten
@@ -42,14 +42,14 @@ embed_description,Use the following embed code to embed this visualization in yo
 map_ranking,GHI Scores,Ranking 
 ranking_description,"GHI scores by country, from highest to lowest hunger levels.","WHI-Werte nach Ländern, von den höchsten zu den niedrigsten"
 map_find_out_more,Find out more,Mehr erfahren
-country_ghi_description,The 2015 GHI Score for <country> is <score>,Der <Jahr> WHI-Wert für <Land> ist <Punkte>
+country_ghi_description,The 2016 GHI Score for <country> is <score>,Der <Jahr> WHI-Wert für <Land> ist <Punkte>
 country_score_evolution,<score> points (<prev_score> in <year>),<Punkte> Punktwerte (<vorige_Punkte> in <Jahr>)
 country_ghi_chart,Global hunger index evolution,Entwicklung des Welthunger-Index
-country_detailed_score,Detailed score for 2015,Detaillierte Werte für 2015
-country_evolution_details,Evolution from 1990 to 2015,Entwicklung von 1990 bis 2015
-name_app,2015 Global Hunger Index App,2015 Welthunger-Index App
-name,2015 Global Hunger Index,2015 Welthunger-Index
-points,points,punkte
+country_detailed_score,Detailed score for 2016,Detaillierte Werte für 2016
+country_evolution_details,Evolution from 1992 to 2016,Entwicklung von 1992 bis 2016
+name_app,2016 Global Hunger Index App,2016 Welthunger-Index App
+name,2016 Global Hunger Index,2016 Welthunger-Index
+points,Score,Score
 evolution,Evolution,Entwicklung
 ifpri_estimate,IFPRI estimate,IFPRI-Schätzungen
 trends_zone,Zone,Region
@@ -57,9 +57,3 @@ trends_country,Country,Land
 trends_year,Year,Jahr
 trends_all_countries,All Countries,Alle Länder
 trends_search,Search,Suchen
-country_no_data_available,A 2015 GHI score could not be calculated for <country> because data for all underlying indicators were not available.,"2015 konnte kein WHI-Wert für <country> berechnet werden, weil nicht für jeden Indikator Daten zur Verfügung standen."
-share_description_head_text,"The Global Hunger Index (GHI) is a tool designed to comprehensively measure and track hunger globally, regionally, and by country. Each year, the International Food Policy Research Institute (IFPRI) calculates GHI scores in order to assess progress, or the lack thereof, in decreasing hunger. The GHI is designed to raise awareness and understanding of regional and country differences in the struggle against hunger. By calling attention to the issue, we hope that the GHI will trigger action to reduce hunger around the world.","Der Welthunger-Index (WHI) ist ein Instrument, mit dem die Hungersituation sowohl weltweit als auch in ausgewählten Regionen und Ländern umfassend dargestellt wird.1 Er wird jedes Jahr vom Internationalen Forschungsinstitut für Ernährungs- und Entwicklungspolitik (IFPRI) berechnet, um damit die Fortschritte – oder deren Ausbleiben – bei der Reduzierung des Hungers zu bewerten. Der WHI soll zu gesteigertem Bewusstsein und Verständnis für Unterschiede zwischen Regionen und Ländern im Kampf gegen den Hunger beitragen. Wir hoffen, dass dieser Bericht und die Sensibilisierung für dieses Thema helfen, weltweite Initiativen zur Hungerbekämpfung anzustoßen."
-tweet_share_text,"Global%20GHI%20scores%20have%20declined%20by%2027%25%20in%202015.%20See%20the%20interactive%20app%20%23GHI2015%20","Weltweit%20hat%20sich%20der%20WHI-Wert%202015%20um%2027%25%20verbessert.%20Mehr%20auf%20der%20interaktiven%20App%20%23GHI2015%20"
-localized_share_url,"http://ghi.ifpri.org","http://www.welthungerhilfe.de/welthungerindex-karte.html"
-encoded_share_url,"http%3A%2F%2Fghi.ifpri.org","http%3A%2F%2Fwww.welthungerhilfe.de%2Fwelthungerindex-karte.html"
-embed_code,"http://ghi.ifpri.org/embed","http://ghi.ifpri.org/de/embed"

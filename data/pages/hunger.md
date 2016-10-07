@@ -4,7 +4,7 @@
 
 **Undernutrition** goes beyond calories and signifies deficiencies in any or all of the following: energy, protein, or essential vitamins and minerals. Undernutrition is the result of inadequate intake of food in terms of either quantity or quality, poor utilization of nutrients due to infections or other illnesses, or a combination of these factors. These, in turn, are caused by a range of factors including household food insecurity; inadequate maternal health or childcare practices; or inadequate access to health services, safe water, and sanitation.
 
- **Malnutrition** refers more broadly to both undernutrition (problems of deficiencies) and overnutrition (problems of unbalanced diets, which includes consuming too many calories in relation to energy requirements, with or without low intake of micronutrient-rich foods).
+ **Malnutrition** refers more broadly to both undernutrition (problems of deficiencies) and overnutrition (problems of unbalanced diets, which include consuming too many calories in relation to energy requirements, with or without low intake of micronutrient-rich foods).
 
 In this report, **“hunger”** refers to the index based on the four component indicators. Taken together, the component indicators (undernourishment, child stunting, child wasting, and child mortality) reflect deficiencies in calories as well as in micronutrients. Thus, the GHI reflects both aspects of hunger.
 

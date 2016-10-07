@@ -1,5 +1,5 @@
 #Contact
-For more information about the 2015 Global Hunger Index, please contact:
+For more information about the 2016 Global Hunger Index, please contact:
 
 **International Food Policy Research Institute**  
 For media contact:  

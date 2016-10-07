@@ -66,7 +66,8 @@
         <h4> {{ m.share_title }} </h4>
         <p> {{ m.share_description }} </p>
         <p>
-          <a target="_blank" class="twitter-share-button" href="https://twitter.com/intent/tweet?url={{ m.encoded_share_url }}&amp;text={{ m.tweet_share_text }}"><i class="fi-social-twitter large"></i></a>
+          <!-- <a target="_blank" class="twitter-share-button" href="https://twitter.com/intent/tweet?url={{ m.encoded_share_url }}&amp;text={{ m.tweet_share_text }}"><i class="fi-social-twitter large"></i></a> -->
+		  <a target="_blank" class="twitter-share-button" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fghi.ifpri.org&text=Global%20GHI%20scores%20have%20declined%20by%2029%25%20in%202016.%20See%20the%20interactive%20app&hashtags=%23GHI2016&"><i class="fi-social-twitter large"></i></a>
           <a target="_blank" class="fb-share-button" href="https://www.facebook.com/sharer/sharer.php?u={{ m.encoded_share_url }}"><i class="fi-social-facebook large"></i></a>
         </p>
       </div>
@@ -107,13 +108,12 @@
       <div class="row">
         <div class="large-12 columns year-select">
           <strong>{{ m.map_ranking }}</strong>
-          <button id="year-button" href="#" data-dropdown="year-drop" aria-controls="year-drop" aria-expanded="false" class="dropdown">2015</button>
+          <button id="year-button" href="#" data-dropdown="year-drop" aria-controls="year-drop" aria-expanded="false" class="dropdown">2016</button>
           <ul id="year-drop" data-dropdown-content class="f-dropdown" aria-hidden="true">
-            <li><a class="2015" href="#">2015</a></li>
-            <li><a class="2005" href="#">2005</a></li>
+            <li><a class="2016" href="#">2016</a></li>
+            <li><a class="2008" href="#">2008</a></li>
             <li><a class="2000" href="#">2000</a></li>
-            <li><a class="1995" href="#">1995</a></li>
-            <li><a class="1990" href="#">1990</a></li>
+            <li><a class="1992" href="#">1992</a></li>
           </ul>
           <a class="button right tiny secondary radius" href="#" data-reveal-id="shareModal">
             <i class="fi-share"></i> {{ m.share_title }}/{{ m.embed_title }}

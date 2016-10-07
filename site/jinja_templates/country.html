@@ -16,7 +16,7 @@ Chart.defaults.global.maintainAspectRatio = false;
 // Global Hunger Index score chart
 var context = $('#chart-score').get(0).getContext('2d');
 var scoreData = {
-  labels: ["1990", "1995", "2000", "2005", "2015"],
+  labels: ["1992","2000","2008", "2016"],
   datasets: [
   {
     label: "{{ m.country_ghi_chart }}",
@@ -27,9 +27,9 @@ var scoreData = {
     pointHighlightFill: "#fff",
     pointHighlightStroke: "rgba(220,220,220,1)",
 
-    data: [{{ score.year1990|replace("<", "") }}, {{ score.year1995|replace("<", "") }}, 
-      {{ score.year2000|replace("<", "") }}, {{ score.year2005|replace("<", "") }}, 
-      {{ score.year2015|replace("<", "") }}]
+    data: [{{ score.year1992|replace("<", "") }},  
+      {{ score.year2000|replace("<", "") }},{{ score.year2008|replace("<", "") }}, 
+      {{ score.year2016|replace("<", "") }}]
   }],
 };
 
@@ -62,7 +62,7 @@ var scoreChart = new Chart(context).Line(scoreData, {
 // Undernourished chart
 var context = $('#chart-undernourished').get(0).getContext('2d');
 var underData = {
-  labels: ["1990", "1995", "2000", "2005", "2015"],
+  labels: ["1992","2000", "2008", "2016"],
   datasets: [
   {
     fillColor: "rgba(220,220,220,0.2)",
@@ -72,11 +72,10 @@ var underData = {
     pointHighlightFill: "#fff",
     pointHighlightStroke: "rgba(220,220,220,1)",
 
-    data: [{{ d.undernourished_1990.score|replace("-", "null") }}, 
-      {{ d.undernourished_1995.score|replace("-", "null") }}, 
+    data: [{{ d.undernourished_1992.score|replace("-", "null") }}, 
       {{ d.undernourished_2000.score|replace("-", "null") }}, 
-      {{ d.undernourished_2005.score|replace("-", "null") }}, 
-        {{ d.undernourished_2015.score|replace("-", "null") }}]
+      {{ d.undernourished_2008.score|replace("-", "null") }}, 
+        {{ d.undernourished_2016.score|replace("-", "null") }}]
   }],
 };
 var underChart = new Chart(context).Line(underData, {
@@ -85,11 +84,10 @@ var underChart = new Chart(context).Line(underData, {
   scaleStepWidth: 20,
   bezierCurve: false, 
   tooltipTemplate: function (d) {
-    if (d.label === "1990" && {{ d.undernourished_1990.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
-    if (d.label === "1995" && {{ d.undernourished_1995.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+    if (d.label === "1992" && {{ d.undernourished_1992.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
     if (d.label === "2000" && {{ d.undernourished_2000.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
-    if (d.label === "2005" && {{ d.undernourished_2005.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
-    if (d.label === "2015" && {{ d.undernourished_2015.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+    if (d.label === "2008" && {{ d.undernourished_2008.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+    if (d.label === "2016" && {{ d.undernourished_2016.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
     if (d.value === null) { 
       if (window.location.href.indexOf('/de') > 1) {
         return d.label + ": Keine Angaben"; 
@@ -104,7 +102,7 @@ var underChart = new Chart(context).Line(underData, {
 // Wasting chart
 var context = $('#chart-wasting').get(0).getContext('2d');
 var wastingData = {
-  labels: ["1990", "1995", "2000", "2005", "2015"],
+  labels: ["1992", "2000", "2008", "2016"],
   datasets: [
   {
     fillColor: "rgba(220,220,220,0.2)",
@@ -114,11 +112,10 @@ var wastingData = {
     pointHighlightFill: "#fff",
     pointHighlightStroke: "rgba(220,220,220,1)",
 
-    data: [{{ d.wasting_1990.score|replace("-", "null") }}, 
-      {{ d.wasting_1995.score|replace("-", "null") }}, 
+    data: [{{ d.wasting_1992.score|replace("-", "null") }}, 
       {{ d.wasting_2000.score|replace("-", "null") }}, 
-      {{ d.wasting_2005.score|replace("-", "null") }}, 
-        {{ d.wasting_2015.score|replace("-", "null") }}]
+      {{ d.wasting_2008.score|replace("-", "null") }}, 
+        {{ d.wasting_2016.score|replace("-", "null") }}]
   }],
 };
 var wastingChart = new Chart(context).Line(wastingData, {
@@ -127,11 +124,10 @@ var wastingChart = new Chart(context).Line(wastingData, {
   scaleStepWidth: 20,
   bezierCurve: false, 
   tooltipTemplate: function (d) {
-    if (d.label === "1990" && {{ d.wasting_1990.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
-    if (d.label === "1995" && {{ d.wasting_1995.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+    if (d.label === "1992" && {{ d.wasting_1992.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
     if (d.label === "2000" && {{ d.wasting_2000.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
-    if (d.label === "2005" && {{ d.wasting_2005.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
-    if (d.label === "2015" && {{ d.wasting_2015.estimate|lower }}) { return d.label + ": " + d.value + ' {{ m.ifpri_estimate }})'; }
+    if (d.label === "2008" && {{ d.wasting_2008.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+    if (d.label === "2016" && {{ d.wasting_2016.estimate|lower }}) { return d.label + ": " + d.value + ' {{ m.ifpri_estimate }})'; }
 if (d.value === null) { 
   if (window.location.href.indexOf('/de') > 1) {
     return d.label + ": Keine Angaben"; 
@@ -145,7 +141,7 @@ return d.label + ": " + d.value;
 // Stunting chart
 var context = $('#chart-stunting').get(0).getContext('2d');
 var stuntingData = {
-  labels: ["1990", "1995", "2000", "2005", "2015"],
+  labels: ["1992", "2000", "2008", "2016"],
   datasets: [
   {
     fillColor: "rgba(220,220,220,0.2)",
@@ -155,11 +151,10 @@ var stuntingData = {
     pointHighlightFill: "#fff",
     pointHighlightStroke: "rgba(220,220,220,1)",
 
-    data: [{{ d.stunting_1990.score|replace("-", "null") }}, 
-      {{ d.stunting_1995.score|replace("-", "null") }}, 
+    data: [{{ d.stunting_1992.score|replace("-", "null") }}, 
       {{ d.stunting_2000.score|replace("-", "null") }}, 
-      {{ d.stunting_2005.score|replace("-", "null") }}, 
-        {{ d.stunting_2015.score|replace("-", "null") }}]
+      {{ d.stunting_2008.score|replace("-", "null") }}, 
+        {{ d.stunting_2016.score|replace("-", "null") }}]
   }],
 };
 var stuntingChart = new Chart(context).Line(stuntingData, {
@@ -168,11 +163,10 @@ var stuntingChart = new Chart(context).Line(stuntingData, {
   scaleStepWidth: 20,
   bezierCurve: false, 
   tooltipTemplate: function (d) {
-    if (d.label === "1990" && {{ d.stunting_1990.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
-    if (d.label === "1995" && {{ d.stunting_1995.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+    if (d.label === "1992" && {{ d.stunting_1992.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
     if (d.label === "2000" && {{ d.stunting_2000.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
-    if (d.label === "2005" && {{ d.stunting_2005.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
-    if (d.label === "2015" && {{ d.stunting_2015.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+    if (d.label === "2008" && {{ d.stunting_2008.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
+    if (d.label === "2016" && {{ d.stunting_2016.estimate|lower }}) { return d.label + ": " + d.value + ' ({{ m.ifpri_estimate }})'; }
     if (d.value === null) { 
       if (window.location.href.indexOf('/de') > 1) {
         return d.label + ": Keine Angaben"; 
@@ -187,7 +181,7 @@ var stuntingChart = new Chart(context).Line(stuntingData, {
 // Mortality chart
 var context = $('#chart-mortality').get(0).getContext('2d');
 var mortalityData = {
-  labels: ["1990", "1995", "2000", "2005", "2013"],
+  labels: ["1992", "2000", "2008", "2015"],
   datasets: [
   {
     fillColor: "rgba(220,220,220,0.2)",
@@ -197,11 +191,10 @@ var mortalityData = {
     pointHighlightFill: "#fff",
     pointHighlightStroke: "rgba(220,220,220,1)",
 
-    data: [{{ d.mortality_1990.score|replace("-", "null") }}, 
-      {{ d.mortality_1995.score|replace("-", "null") }}, 
+    data: [{{ d.mortality_1992.score|replace("-", "null") }}, 
       {{ d.mortality_2000.score|replace("-", "null") }}, 
-      {{ d.mortality_2005.score|replace("-", "null") }}, 
-        {{ d.mortality_2013.score|replace("-", "null") }}]
+      {{ d.mortality_2008.score|replace("-", "null") }}, 
+        {{ d.mortality_2015.score|replace("-", "null") }}]
   }],
 };
 var mortalityChart = new Chart(context).Line(mortalityData, {
@@ -259,24 +252,24 @@ function getSeverityClass(d) {
 
     <div id="summary" class="row">
       <div class="large-12 columns"> 
-        {% if score.year2015 == "null" %}
+        {% if score.year2016 == "null" %}
         {% if lang == "de" %}
-        <p>2015 konnte kein WHI-Wert für berechnet werden, weil nicht für jeden Indikator Daten zur Verfügung standen.</p>
+        <p>2016 konnte kein WHI-Wert für berechnet werden, weil nicht für jeden Indikator Daten zur Verfügung standen.</p>
         {% else %}
-        <p>A 2015 GHI score could not be calculated for {{ name }} because data for all underlying indicators were not available.</p>
+        <p>A 2016 GHI score could not be calculated for {{ name }} because data for all underlying indicators were not available.</p>
         {% endif %}
         {% else %}
         {% if lang == "de" %}
-        <p class="severity">Der 2015 WHI-Wert für {{ name }} ist <strong>{{ score.year2015 }}</strong>.</p>
+        <p class="severity">Der 2016 WHI-Wert für {{ name }} ist <strong>{{ score.year2016 }}</strong>.</p>
         {% else %}
-        <p class="severity">The 2015 GHI Score for {{ name }} is <strong>{{ score.year2015 }}</strong>.</p>
+        <p class="severity">The 2016 GHI Score for {{ name }} is <strong>{{ score.year2016 }}</strong>.</p>
         {% endif %}
 
         <p id="hunger-level"><em>{{ m.map_level }}</em> <strong>{{ level }}</strong></p>
         {% endif %}
 
         {% if scorediff %}
-        <p id="score-value"><em>{{ m.evolution }}</em> <strong class="{{ score_evolution }}"><i class="fi-arrow-{{ score_evolution }}"></i> {{ scorediff }} {{ m.points }} </strong> ({{ score.year2005 }} in 2005)</p>
+        <p id="score-value"><em>{{ m.evolution }}</em> <strong class="{{ score_evolution }}"><i class="fi-arrow-{{ score_evolution }}"></i> {{ scorediff }} {{ m.points }} </strong> ({{ score.year2008 }} in 2008)</p>
         {% endif %}
       </div>
     </div>
@@ -304,10 +297,10 @@ function getSeverityClass(d) {
           <tbody>
             <tr>
               <th>{{ m.country_score_data }}</th>
-              <td>{{ d.undernourished_2015.score }}</td>
-              <td>{{ d.wasting_2015.score }}</td>
-              <td>{{ d.stunting_2015.score }}</td>
-              <td>{{ d.mortality_2013.score }}</td>
+              <td>{{ d.undernourished_2016.score }}</td>
+              <td>{{ d.wasting_2016.score }}</td>
+              <td>{{ d.stunting_2016.score }}</td>
+              <td>{{ d.mortality_2015.score }}</td>
             </tr>
           </tbody>
         </table>
