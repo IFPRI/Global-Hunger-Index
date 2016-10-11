@@ -1,0 +1,225 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2016 Global Hunger Index</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../styles/leaflet.css">    
+  <link rel="stylesheet" href="../fonts/foundation-icons/foundation-icons.css" />    
+  <link rel="stylesheet" href="../styles/app.css">
+
+
+  <script src="../scripts/modernizr.js"></script>
+  
+  <meta property="og:title" content="2016 Global Hunger Index" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  
+    <meta property="og:image" content="http://ghi.ifpri.org/images/share.png" />
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2016 Global Hunger Index" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:url" content="" />
+  
+    <meta property="twitter:image" content="http://ghi.ifpri.org/images/share.png" />
+  
+
+
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon-180x180.png">
+  
+  <meta name="application-name" content="2016 Global Hunger Index">
+  <meta name="msapplication-TileColor" content="#333333">
+  <meta name="msapplication-TileImage" content="../images/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" sizes="192x192" href="../images/android-chrome-192x192.png">
+  <link rel="icon" sizes="16x16" href="../images/favicon.ico">
+</head>
+<body>
+  
+    <img src="../images/ghi-share.png" class="hide">
+  
+
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="../">
+            <img src="../images/ghi.svg" onerror="this.src='../images/ghi.png'" alt="2016 Global Hunger Index">
+            <span>2016 Global Hunger Index</span>
+          </a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="has-dropdown"> <a href="#">Language</a>
+          <ul class="dropdown">
+            <li class="active"><a href="../">English</a></li>
+            <li><a href="../de/">German</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><a href="../trends/">Index</a></li>
+        <li><a href="../results/">Results</a></li>
+        <li class="active"><a href="../methodology/">Methodology</a></li>
+        <li><a href="../hunger/">Hunger</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../contact/">Contact</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  
+
+
+<section id="static-content" class="spaced-row">
+  <div class="row">
+    <div class="large-12 columns">
+        <h1>Methodology</h1>
+<p><strong>Here is how the Global Hunger Index (GHI) scores are calculated:</strong></p>
+<h4><strong>STEP 1 -  Determine values for the component indicators:</strong></h4>
+<table style="width:55%">
+
+<tbody>
+
+<tr>
+
+<td>PUN</td>
+
+<td>proportion of the population that is undernourished (in %)</td>
+
+</tr>
+
+<tr>
+
+<td>CWA</td>
+
+<td>prevalence of wasting in children under five years old (in %)</td>
+
+</tr>
+
+<tr>
+
+<td>CST</td>
+
+<td>prevalence of stunting in children under five years old (in %)</td>
+
+</tr>
+
+<tr>
+
+<td>CM</td>
+
+<td>proportion of children dying before the age of five (in %)</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h4><strong>STEP 2 - Standardize component indicators:</strong></h4>
+<p>Standardized PUN = <sup>PUN</sup>⁄<sub>80</sub> x 100<br />
+Standardized CWA = <sup>CWA</sup>⁄<sub>30</sub> x 100<br />
+Standardized CST = <sup>CST</sup>⁄<sub>70</sub> x 100<br />
+Standardized CM = <sup>CM</sup>⁄<sub>35</sub> x 100  </p>
+<h4><strong>STEP 3 - Aggregate component indicators:</strong></h4>
+<p><sup>1</sup>⁄<sub>3</sub> Standardized PUN<br />
++ <sup>1</sup>⁄<sub>6</sub> Standardized CWA<br />
++ <sup>1</sup>⁄<sub>6</sub> Standardized CST<br />
++ <sup>1</sup>⁄<sub>3</sub> Standardized CM  </p>
+<hr />
+<p>= GHI Score</p>
+<p>The following paragraphs describe in more detail the three-step process for calculating GHI scores.</p>
+<p>First, values for each of the four component indicators are determined from the available data for each country. The four indicators are</p>
+<ul>
+<li>the percentage of the population that is undernourished,</li>
+<li>the percentage of children under five years old who suffer from wasting (low weight for height),</li>
+<li>the percentage of children under five years old who suffer from stunting (low height for age), and</li>
+<li>the percentage of children who die before the age of five (child mortality).</li>
+</ul>
+<p>Second, each of the four component indicators is given a standardized score based on thresholds set slightly above the highest country-level values observed worldwide for that indicator between 1988 and 2013.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> For example, the highest value for undernourishment estimated in this period is 76.5 percent, so the threshold for standardization was set a bit higher, at 80 percent.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> In a given year, if a country has an undernourishment prevalence of 40 percent, its <em>standardized</em> undernourishment score for that year is 50. In other words, that country is approximately halfway between having no undernourishment and reaching the maximum observed levels.</p>
+<p>Third, the standardized scores are aggregated to calculate the GHI score for each country. Undernourishment and child mortality each contribute one-third of the GHI score, while the child undernutrition indicators–child wasting and child stunting–each contribute one-sixth of the score.</p>
+<p>This calculation results in GHI scores on a 100-point scale where 0 is the best score (no hunger) and 100 the worst. In practice, neither of these extremes is reached. A value of 100 would signify that a country's undernourishment, child wasting, child stunting, and child mortality levels each exactly meet the thresholds set slightly above the highest levels observed worldwide in recent decades. A value of zero would mean that a country had no undernourished people in the population, no children younger than five who were wasted or stunted, and no children who died before their fifth birthday.</p>
+<hr />
+<h4>GHI Severity Scale</h4>
+<p>The severity scale shows the severity of hunger–from low to extremely alarming–associated with the range of possible GHI scores using the revised formula.</p>
+<p><img alt="GHI Severity Scale" src="http://library.ifpri.info/files/2015/10/ghi_2015_ch01_box02_fig.png" /></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The thresholds for standardization are set slightly above the highest observed values in order to allow for the possibility that these values could be exceeded in the future.  &#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>The threshold for undernourishment is 80, based on the observed maximum of 76.5 percent; the threshold for child wasting is 30, based on the observed maximum of 26.0 percent; the threshold for child stunting is 70, based on the observed maximum of 68.2 percent; and the threshold for child mortality is 35, based on the observed maximum of 32.6 percent.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+    </div>
+  </div>
+</section>      
+
+
+
+  <div id="footer">
+    <div class="row">
+      <div class="medium-8 medium-8 columns">
+        <ul class="orgs">
+          <li><a target="_blank" href="http://www.ifpri.org"><img src="../images/ifpri_white.png"></a></li>
+          <li><a target="_blank" href="https://www.concern.net"><img src="../images/concern-worldwide_white.png"></a></li>
+          <li><a target="_blank" href="http://www.welthungerhilfe.de/en/home-en.html"><img src="../images/welthungerhilfe_white.png"></a></li>
+        </ul>
+      </div>
+      <div class="medium-4 medium-4 columns">
+        <ul class="credits">
+          <li><i class="fi-eye small"></i> <a target="_blank" href="https://github.com/IFPRI/Global-Hunger-Index">Source code</a></li>
+          <li><i class="fi-heart small"></i> Made by <a target="_blank" href="http://jplusplus.org">Journalism++</a></li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- /#Footer -->  
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="../scripts/jquery.js"></script>
+  <script src="../scripts/foundation.min.js"></script>
+  <script src="../scripts/foundation-scripts.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  
+  <!-- endbuild -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-35984661-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body>
+</html>

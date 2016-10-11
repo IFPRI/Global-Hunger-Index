@@ -1,0 +1,1838 @@
+{
+  "data": [
+    {
+      "undernourished": "45.2", 
+      "stunting": "54.7*", 
+      "zone": "SEA", 
+      "wasting": "13.5*", 
+      "country": {
+        "name_de": "Afghanistan", 
+        "name": "Afghanistan", 
+        "id": "AFG"
+      }, 
+      "score": "52.4", 
+      "DT_RowClass": "extra-alarming", 
+      "mortality": "13.7"
+    }, 
+    {
+      "undernourished": "51.1", 
+      "stunting": "46.6*", 
+      "zone": "CSAF", 
+      "wasting": "8.6*", 
+      "country": {
+        "name_de": "Angola", 
+        "name": "Angola", 
+        "id": "AGO"
+      }, 
+      "score": "57.8", 
+      "DT_RowClass": "extra-alarming", 
+      "mortality": "21.7"
+    }, 
+    {
+      "undernourished": "6.1*", 
+      "stunting": "39.2", 
+      "zone": "EEFSU", 
+      "wasting": "12.2", 
+      "country": {
+        "name_de": "Albanien", 
+        "name": "Albania", 
+        "id": "ALB"
+      }, 
+      "score": "21.1", 
+      "DT_RowClass": "serious", 
+      "mortality": "2.6"
+    }, 
+    {
+      "undernourished": "0.9*", 
+      "stunting": "8.7*", 
+      "zone": "SA", 
+      "wasting": "1.7*", 
+      "country": {
+        "name_de": "Argentinien", 
+        "name": "Argentina", 
+        "id": "ARG"
+      }, 
+      "score": "5.3", 
+      "DT_RowClass": "low", 
+      "mortality": "2"
+    }, 
+    {
+      "undernourished": "21.4", 
+      "stunting": "17.7", 
+      "zone": "EEFSU", 
+      "wasting": "2.5", 
+      "country": {
+        "name_de": "Armenien", 
+        "name": "Armenia", 
+        "id": "ARM"
+      }, 
+      "score": "17.4", 
+      "DT_RowClass": "moderate", 
+      "mortality": "3"
+    }, 
+    {
+      "undernourished": "22.5", 
+      "stunting": "24.1", 
+      "zone": "EEFSU", 
+      "wasting": "9", 
+      "country": {
+        "name_de": "Aserbaidschan", 
+        "name": "Azerbaijan", 
+        "id": "AZE"
+      }, 
+      "score": "27.2", 
+      "DT_RowClass": "serious", 
+      "mortality": "7.4"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "63.1", 
+      "zone": "EAF", 
+      "wasting": "8.2", 
+      "country": {
+        "name_de": "Burundi", 
+        "name": "Burundi", 
+        "id": "BDI"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "15.2"
+    }, 
+    {
+      "undernourished": "23.9", 
+      "stunting": "39.1", 
+      "zone": "WAF", 
+      "wasting": "9", 
+      "country": {
+        "name_de": "Benin", 
+        "name": "Benin", 
+        "id": "BEN"
+      }, 
+      "score": "38.1", 
+      "DT_RowClass": "alarming", 
+      "mortality": "14.5"
+    }, 
+    {
+      "undernourished": "26.6", 
+      "stunting": "45.5", 
+      "zone": "WAF", 
+      "wasting": "15.7", 
+      "country": {
+        "name_de": "Burkina Faso", 
+        "name": "Burkina Faso", 
+        "id": "BFA"
+      }, 
+      "score": "48.4", 
+      "DT_RowClass": "alarming", 
+      "mortality": "18.6"
+    }, 
+    {
+      "undernourished": "23.1", 
+      "stunting": "54", 
+      "zone": "SEA", 
+      "wasting": "13.8", 
+      "country": {
+        "name_de": "Bangladesch", 
+        "name": "Bangladesh", 
+        "id": "BGD"
+      }, 
+      "score": "38.5", 
+      "DT_RowClass": "alarming", 
+      "mortality": "8.8"
+    }, 
+    {
+      "undernourished": "7.7*", 
+      "stunting": "9.9*", 
+      "zone": "EEFSU", 
+      "wasting": "3.4*", 
+      "country": {
+        "name_de": "Bulgarien", 
+        "name": "Bulgaria", 
+        "id": "BGR"
+      }, 
+      "score": "9.5", 
+      "DT_RowClass": "low", 
+      "mortality": "2.1"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "13.7*", 
+      "zone": "MENA", 
+      "wasting": "6.7*", 
+      "country": {
+        "name_de": "Bahrain", 
+        "name": "Bahrain", 
+        "id": "BHR"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "1.3"
+    }, 
+    {
+      "undernourished": "4.1*", 
+      "stunting": "12.1", 
+      "zone": "EEFSU", 
+      "wasting": "7.4", 
+      "country": {
+        "name_de": "Bosnien und Herzegowina", 
+        "name": "Bosnia & Herzegovina", 
+        "id": "BIH"
+      }, 
+      "score": "9.6", 
+      "DT_RowClass": "low", 
+      "mortality": "0.9"
+    }, 
+    {
+      "undernourished": "2.2*", 
+      "stunting": "5.4*", 
+      "zone": "EEFSU", 
+      "wasting": "2.3*", 
+      "country": {
+        "name_de": "Belarus\u00a0(Weissrussland)", 
+        "name": "Belarus", 
+        "id": "BLR"
+      }, 
+      "score": "<5", 
+      "DT_RowClass": "low", 
+      "mortality": "1.4"
+    }, 
+    {
+      "undernourished": "34.6", 
+      "stunting": "33.1", 
+      "zone": "SA", 
+      "wasting": "1.6", 
+      "country": {
+        "name_de": "Bolivien", 
+        "name": "Bolivia", 
+        "id": "BOL"
+      }, 
+      "score": "30.8", 
+      "DT_RowClass": "serious", 
+      "mortality": "8"
+    }, 
+    {
+      "undernourished": "12.3", 
+      "stunting": "10.1*", 
+      "zone": "SA", 
+      "wasting": "2.2*", 
+      "country": {
+        "name_de": "Brasilien", 
+        "name": "Brazil", 
+        "id": "BRA"
+      }, 
+      "score": "11.8", 
+      "DT_RowClass": "moderate", 
+      "mortality": "3.2"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "47.7", 
+      "zone": "SEA", 
+      "wasting": "2.5", 
+      "country": {
+        "name_de": "Bhutan", 
+        "name": "Bhutan", 
+        "id": "BTN"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "8"
+    }, 
+    {
+      "undernourished": "35.6", 
+      "stunting": "29.1", 
+      "zone": "CSAF", 
+      "wasting": "6", 
+      "country": {
+        "name_de": "Botswana", 
+        "name": "Botswana", 
+        "id": "BWA"
+      }, 
+      "score": "33", 
+      "DT_RowClass": "serious", 
+      "mortality": "8.3"
+    }, 
+    {
+      "undernourished": "44.1", 
+      "stunting": "44.6", 
+      "zone": "CSAF", 
+      "wasting": "10.5", 
+      "country": {
+        "name_de": "Zentralafrikanische Republik", 
+        "name": "Central African Republic", 
+        "id": "CAF"
+      }, 
+      "score": "51.5", 
+      "DT_RowClass": "extra-alarming", 
+      "mortality": "17.5"
+    }, 
+    {
+      "undernourished": "4.7*", 
+      "stunting": "2.9", 
+      "zone": "SA", 
+      "wasting": "0.5", 
+      "country": {
+        "name_de": "Chile", 
+        "name": "Chile", 
+        "id": "CHL"
+      }, 
+      "score": "<5", 
+      "DT_RowClass": "low", 
+      "mortality": "1.1"
+    }, 
+    {
+      "undernourished": "16.2", 
+      "stunting": "17.8", 
+      "zone": "SEA", 
+      "wasting": "2.5", 
+      "country": {
+        "name_de": "China, Volksrepublik", 
+        "name": "China", 
+        "id": "CHN"
+      }, 
+      "score": "15.9", 
+      "DT_RowClass": "moderate", 
+      "mortality": "3.7"
+    }, 
+    {
+      "undernourished": "14.9", 
+      "stunting": "31.5", 
+      "zone": "WAF", 
+      "wasting": "6.9", 
+      "country": {
+        "name_de": "C\u00f4te D'ivoire\u00a0(Elfenbeink\u00fcste)", 
+        "name": "C\u00f4te d'Ivoire", 
+        "id": "CIV"
+      }, 
+      "score": "31.4", 
+      "DT_RowClass": "serious", 
+      "mortality": "14.6"
+    }, 
+    {
+      "undernourished": "32.3", 
+      "stunting": "38.2", 
+      "zone": "CSAF", 
+      "wasting": "6.2", 
+      "country": {
+        "name_de": "Kamerun", 
+        "name": "Cameroon", 
+        "id": "CMR"
+      }, 
+      "score": "40.3", 
+      "DT_RowClass": "alarming", 
+      "mortality": "15"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "44.4", 
+      "zone": "CSAF", 
+      "wasting": "20.9", 
+      "country": {
+        "name_de": "Kongo, Demokratische Republik\u00a0(Ehem. Zaire)", 
+        "name": "Congo, Dem. Rep.", 
+        "id": "COD"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "16.1"
+    }, 
+    {
+      "undernourished": "35.9", 
+      "stunting": "28.7*", 
+      "zone": "CSAF", 
+      "wasting": "6.9*", 
+      "country": {
+        "name_de": "Republik Kongo", 
+        "name": "Congo, Rep.", 
+        "id": "COG"
+      }, 
+      "score": "37.2", 
+      "DT_RowClass": "alarming", 
+      "mortality": "12.2"
+    }, 
+    {
+      "undernourished": "9.9", 
+      "stunting": "18.1", 
+      "zone": "SA", 
+      "wasting": "1.1", 
+      "country": {
+        "name_de": "Kolumbien", 
+        "name": "Colombia", 
+        "id": "COL"
+      }, 
+      "score": "11.4", 
+      "DT_RowClass": "moderate", 
+      "mortality": "2.5"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "46.9", 
+      "zone": "EAF", 
+      "wasting": "13.3", 
+      "country": {
+        "name_de": "Komoren", 
+        "name": "Comoros", 
+        "id": "COM"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "10.1"
+    }, 
+    {
+      "undernourished": "5.2", 
+      "stunting": "8*", 
+      "zone": "CAR", 
+      "wasting": "1.7*", 
+      "country": {
+        "name_de": "Costa Rica", 
+        "name": "Costa Rica", 
+        "id": "CRI"
+      }, 
+      "score": "6.3", 
+      "DT_RowClass": "low", 
+      "mortality": "1.3"
+    }, 
+    {
+      "undernourished": "5.6", 
+      "stunting": "7", 
+      "zone": "CAR", 
+      "wasting": "2.4", 
+      "country": {
+        "name_de": "Kuba", 
+        "name": "Cuba", 
+        "id": "CUB"
+      }, 
+      "score": "6.1", 
+      "DT_RowClass": "low", 
+      "mortality": "0.8"
+    }, 
+    {
+      "undernourished": "52.4", 
+      "stunting": "26.5", 
+      "zone": "EAF", 
+      "wasting": "19.4", 
+      "country": {
+        "name_de": "Dschibuti", 
+        "name": "Djibouti", 
+        "id": "DJI"
+      }, 
+      "score": "48.5", 
+      "DT_RowClass": "alarming", 
+      "mortality": "10.1"
+    }, 
+    {
+      "undernourished": "30.7", 
+      "stunting": "8", 
+      "zone": "CAR", 
+      "wasting": "1.5", 
+      "country": {
+        "name_de": "Dominikanische Republik", 
+        "name": "Dominican Republic", 
+        "id": "DOM"
+      }, 
+      "score": "19.4", 
+      "DT_RowClass": "moderate", 
+      "mortality": "4.1"
+    }, 
+    {
+      "undernourished": "8.7", 
+      "stunting": "23.6", 
+      "zone": "MENA", 
+      "wasting": "3.1", 
+      "country": {
+        "name_de": "Algerien", 
+        "name": "Algeria", 
+        "id": "DZA"
+      }, 
+      "score": "14.8", 
+      "DT_RowClass": "moderate", 
+      "mortality": "4"
+    }, 
+    {
+      "undernourished": "17.8", 
+      "stunting": "32.5", 
+      "zone": "SA", 
+      "wasting": "3.2", 
+      "country": {
+        "name_de": "Ecuador", 
+        "name": "Ecuador", 
+        "id": "ECU"
+      }, 
+      "score": "20.2", 
+      "DT_RowClass": "serious", 
+      "mortality": "3.4"
+    }, 
+    {
+      "undernourished": "2.7*", 
+      "stunting": "24.6", 
+      "zone": "MENA", 
+      "wasting": "6.9", 
+      "country": {
+        "name_de": "\u00c4gypten", 
+        "name": "Egypt, Arab Rep.", 
+        "id": "EGY"
+      }, 
+      "score": "15.3", 
+      "DT_RowClass": "moderate", 
+      "mortality": "4.7"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "43.7", 
+      "zone": "EAF", 
+      "wasting": "14.9", 
+      "country": {
+        "name_de": "Eritrea", 
+        "name": "Eritrea", 
+        "id": "ERI"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "8.9"
+    }, 
+    {
+      "undernourished": "4.2*", 
+      "stunting": "4.3*", 
+      "zone": "EEFSU", 
+      "wasting": "2.7*", 
+      "country": {
+        "name_de": "Estland", 
+        "name": "Estonia", 
+        "id": "EST"
+      }, 
+      "score": "5.3", 
+      "DT_RowClass": "low", 
+      "mortality": "1.1"
+    }, 
+    {
+      "undernourished": "57.9", 
+      "stunting": "57.4", 
+      "zone": "EAF", 
+      "wasting": "12.4", 
+      "country": {
+        "name_de": "\u00c4thiopien", 
+        "name": "Ethiopia", 
+        "id": "ETH"
+      }, 
+      "score": "58.5", 
+      "DT_RowClass": "extra-alarming", 
+      "mortality": "14.5"
+    }, 
+    {
+      "undernourished": "4.7*", 
+      "stunting": "5.8*", 
+      "zone": "SEA", 
+      "wasting": "8*", 
+      "country": {
+        "name_de": "Fidschi", 
+        "name": "Fiji", 
+        "id": "FJI"
+      }, 
+      "score": "10.2", 
+      "DT_RowClass": "moderate", 
+      "mortality": "2.5"
+    }, 
+    {
+      "undernourished": "4.3*", 
+      "stunting": "26.3", 
+      "zone": "CSAF", 
+      "wasting": "4.3", 
+      "country": {
+        "name_de": "Gabun", 
+        "name": "Gabon", 
+        "id": "GAB"
+      }, 
+      "score": "18.5", 
+      "DT_RowClass": "moderate", 
+      "mortality": "8.5"
+    }, 
+    {
+      "undernourished": "14.8", 
+      "stunting": "16.1", 
+      "zone": "EEFSU", 
+      "wasting": "3.1", 
+      "country": {
+        "name_de": "Georgien", 
+        "name": "Georgia", 
+        "id": "GEO"
+      }, 
+      "score": "15.2", 
+      "DT_RowClass": "moderate", 
+      "mortality": "3.6"
+    }, 
+    {
+      "undernourished": "17.5", 
+      "stunting": "31.3", 
+      "zone": "WAF", 
+      "wasting": "9.9", 
+      "country": {
+        "name_de": "Ghana", 
+        "name": "Ghana", 
+        "id": "GHA"
+      }, 
+      "score": "29.9", 
+      "DT_RowClass": "serious", 
+      "mortality": "10.1"
+    }, 
+    {
+      "undernourished": "27.2", 
+      "stunting": "46.9", 
+      "zone": "WAF", 
+      "wasting": "10.3", 
+      "country": {
+        "name_de": "Guinea", 
+        "name": "Guinea", 
+        "id": "GIN"
+      }, 
+      "score": "44.4", 
+      "DT_RowClass": "alarming", 
+      "mortality": "17"
+    }, 
+    {
+      "undernourished": "14.1", 
+      "stunting": "24.1", 
+      "zone": "WAF", 
+      "wasting": "8.9", 
+      "country": {
+        "name_de": "Gambia", 
+        "name": "Gambia, The", 
+        "id": "GMB"
+      }, 
+      "score": "27.9", 
+      "DT_RowClass": "serious", 
+      "mortality": "11.9"
+    }, 
+    {
+      "undernourished": "28.4", 
+      "stunting": "36.1", 
+      "zone": "WAF", 
+      "wasting": "11.8", 
+      "country": {
+        "name_de": "Guinea-Bissau", 
+        "name": "Guinea-Bissau", 
+        "id": "GNB"
+      }, 
+      "score": "43.9", 
+      "DT_RowClass": "alarming", 
+      "mortality": "17.8"
+    }, 
+    {
+      "undernourished": "22.1", 
+      "stunting": "50", 
+      "zone": "CAR", 
+      "wasting": "3.7", 
+      "country": {
+        "name_de": "Guatemala", 
+        "name": "Guatemala", 
+        "id": "GTM"
+      }, 
+      "score": "28", 
+      "DT_RowClass": "serious", 
+      "mortality": "5.1"
+    }, 
+    {
+      "undernourished": "10.4", 
+      "stunting": "13.8", 
+      "zone": "SA", 
+      "wasting": "12.1", 
+      "country": {
+        "name_de": "Guyana", 
+        "name": "Guyana", 
+        "id": "GUY"
+      }, 
+      "score": "18.8", 
+      "DT_RowClass": "moderate", 
+      "mortality": "4.7"
+    }, 
+    {
+      "undernourished": "19", 
+      "stunting": "34.5", 
+      "zone": "CAR", 
+      "wasting": "1.2", 
+      "country": {
+        "name_de": "Honduras", 
+        "name": "Honduras", 
+        "id": "HND"
+      }, 
+      "score": "20.3", 
+      "DT_RowClass": "serious", 
+      "mortality": "3.7"
+    }, 
+    {
+      "undernourished": "10.5*", 
+      "stunting": "1.4*", 
+      "zone": "EEFSU", 
+      "wasting": "1.3*", 
+      "country": {
+        "name_de": "Kroatien", 
+        "name": "Croatia", 
+        "id": "HRV"
+      }, 
+      "score": "6.2", 
+      "DT_RowClass": "low", 
+      "mortality": "0.8"
+    }, 
+    {
+      "undernourished": "55.2", 
+      "stunting": "28.3", 
+      "zone": "CAR", 
+      "wasting": "5.6", 
+      "country": {
+        "name_de": "Haiti", 
+        "name": "Haiti", 
+        "id": "HTI"
+      }, 
+      "score": "42.8", 
+      "DT_RowClass": "alarming", 
+      "mortality": "10.5"
+    }, 
+    {
+      "undernourished": "17.2", 
+      "stunting": "42.4", 
+      "zone": "SEA", 
+      "wasting": "5.5", 
+      "country": {
+        "name_de": "Indonesien", 
+        "name": "Indonesia", 
+        "id": "IDN"
+      }, 
+      "score": "25.3", 
+      "DT_RowClass": "serious", 
+      "mortality": "5.2"
+    }, 
+    {
+      "undernourished": "17", 
+      "stunting": "54.2", 
+      "zone": "SEA", 
+      "wasting": "17.1", 
+      "country": {
+        "name_de": "Indien", 
+        "name": "India", 
+        "id": "IND"
+      }, 
+      "score": "38.2", 
+      "DT_RowClass": "alarming", 
+      "mortality": "9.1"
+    }, 
+    {
+      "undernourished": "5.2", 
+      "stunting": "20.4", 
+      "zone": "MENA", 
+      "wasting": "6.1", 
+      "country": {
+        "name_de": "Iran, Islamische Republik", 
+        "name": "Iran, Islamic Rep.", 
+        "id": "IRN"
+      }, 
+      "score": "13.7", 
+      "DT_RowClass": "moderate", 
+      "mortality": "3.5"
+    }, 
+    {
+      "undernourished": "24.6", 
+      "stunting": "28.3", 
+      "zone": "MENA", 
+      "wasting": "6.6", 
+      "country": {
+        "name_de": "Irak", 
+        "name": "Iraq", 
+        "id": "IRQ"
+      }, 
+      "score": "24.9", 
+      "DT_RowClass": "serious", 
+      "mortality": "4.5"
+    }, 
+    {
+      "undernourished": "7.8", 
+      "stunting": "6.6", 
+      "zone": "CAR", 
+      "wasting": "3", 
+      "country": {
+        "name_de": "Jamaika", 
+        "name": "Jamaica", 
+        "id": "JAM"
+      }, 
+      "score": "8.6", 
+      "DT_RowClass": "low", 
+      "mortality": "2.2"
+    }, 
+    {
+      "undernourished": "7", 
+      "stunting": "12", 
+      "zone": "MENA", 
+      "wasting": "2.5", 
+      "country": {
+        "name_de": "Jordanien", 
+        "name": "Jordan", 
+        "id": "JOR"
+      }, 
+      "score": "9.8", 
+      "DT_RowClass": "low", 
+      "mortality": "2.8"
+    }, 
+    {
+      "undernourished": "4.4*", 
+      "stunting": "13.9", 
+      "zone": "EEFSU", 
+      "wasting": "2.5", 
+      "country": {
+        "name_de": "Kasachstan", 
+        "name": "Kazakhstan", 
+        "id": "KAZ"
+      }, 
+      "score": "10.7", 
+      "DT_RowClass": "moderate", 
+      "mortality": "4.4"
+    }, 
+    {
+      "undernourished": "32.3", 
+      "stunting": "41", 
+      "zone": "EAF", 
+      "wasting": "7.4", 
+      "country": {
+        "name_de": "Kenia", 
+        "name": "Kenya", 
+        "id": "KEN"
+      }, 
+      "score": "37.6", 
+      "DT_RowClass": "alarming", 
+      "mortality": "10.8"
+    }, 
+    {
+      "undernourished": "15.2", 
+      "stunting": "27.1*", 
+      "zone": "EEFSU", 
+      "wasting": "3.5*", 
+      "country": {
+        "name_de": "Kirgisistan", 
+        "name": "Kyrgyz Republic", 
+        "id": "KGZ"
+      }, 
+      "score": "19.4", 
+      "DT_RowClass": "moderate", 
+      "mortality": "4.9"
+    }, 
+    {
+      "undernourished": "32", 
+      "stunting": "49.2", 
+      "zone": "SEA", 
+      "wasting": "16.9", 
+      "country": {
+        "name_de": "Kambodscha", 
+        "name": "Cambodia", 
+        "id": "KHM"
+      }, 
+      "score": "44.7", 
+      "DT_RowClass": "alarming", 
+      "mortality": "10.8"
+    }, 
+    {
+      "undernourished": "1.9*", 
+      "stunting": "4", 
+      "zone": "MENA", 
+      "wasting": "2.2", 
+      "country": {
+        "name_de": "Kuwait", 
+        "name": "Kuwait", 
+        "id": "KWT"
+      }, 
+      "score": "<5", 
+      "DT_RowClass": "low", 
+      "mortality": "1.3"
+    }, 
+    {
+      "undernourished": "39.2", 
+      "stunting": "48.2", 
+      "zone": "SEA", 
+      "wasting": "17.5", 
+      "country": {
+        "name_de": "Laos, Demokratische Volksrepublik", 
+        "name": "Lao PDR", 
+        "id": "LAO"
+      }, 
+      "score": "48.8", 
+      "DT_RowClass": "alarming", 
+      "mortality": "11.8"
+    }, 
+    {
+      "undernourished": "1.8*", 
+      "stunting": "15.8*", 
+      "zone": "MENA", 
+      "wasting": "4.6*", 
+      "country": {
+        "name_de": "Libanon", 
+        "name": "Lebanon", 
+        "id": "LBN"
+      }, 
+      "score": "9", 
+      "DT_RowClass": "low", 
+      "mortality": "2"
+    }, 
+    {
+      "undernourished": "36.5", 
+      "stunting": "45.3", 
+      "zone": "WAF", 
+      "wasting": "7.4", 
+      "country": {
+        "name_de": "Liberia", 
+        "name": "Liberia", 
+        "id": "LBR"
+      }, 
+      "score": "47.4", 
+      "DT_RowClass": "alarming", 
+      "mortality": "18.2"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "26.2*", 
+      "zone": "MENA", 
+      "wasting": "7.4*", 
+      "country": {
+        "name_de": "Libysch-Arabische Dschamahirija\u00a0(Libyen)", 
+        "name": "Libya", 
+        "id": "LBY"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "2.8"
+    }, 
+    {
+      "undernourished": "29.9", 
+      "stunting": "18.4", 
+      "zone": "SEA", 
+      "wasting": "15.5", 
+      "country": {
+        "name_de": "Sri Lanka", 
+        "name": "Sri Lanka", 
+        "id": "LKA"
+      }, 
+      "score": "27", 
+      "DT_RowClass": "serious", 
+      "mortality": "1.6"
+    }, 
+    {
+      "undernourished": "13", 
+      "stunting": "53", 
+      "zone": "CSAF", 
+      "wasting": "6.7", 
+      "country": {
+        "name_de": "Lesotho", 
+        "name": "Lesotho", 
+        "id": "LSO"
+      }, 
+      "score": "32.9", 
+      "DT_RowClass": "serious", 
+      "mortality": "11.7"
+    }, 
+    {
+      "undernourished": "3.2*", 
+      "stunting": "5.2*", 
+      "zone": "EEFSU", 
+      "wasting": "2.7*", 
+      "country": {
+        "name_de": "Litauen", 
+        "name": "Lithuania", 
+        "id": "LTU"
+      }, 
+      "score": "5.2", 
+      "DT_RowClass": "low", 
+      "mortality": "1.2"
+    }, 
+    {
+      "undernourished": "5.4*", 
+      "stunting": "5*", 
+      "zone": "EEFSU", 
+      "wasting": "2.8*", 
+      "country": {
+        "name_de": "Lettland", 
+        "name": "Latvia", 
+        "id": "LVA"
+      }, 
+      "score": "6.6", 
+      "DT_RowClass": "low", 
+      "mortality": "1.7"
+    }, 
+    {
+      "undernourished": "6.5", 
+      "stunting": "24.3*", 
+      "zone": "MENA", 
+      "wasting": "4.2*", 
+      "country": {
+        "name_de": "Marokko", 
+        "name": "Morocco", 
+        "id": "MAR"
+      }, 
+      "score": "15.6", 
+      "DT_RowClass": "moderate", 
+      "mortality": "5"
+    }, 
+    {
+      "undernourished": "17*", 
+      "stunting": "12.3*", 
+      "zone": "EEFSU", 
+      "wasting": "3.9*", 
+      "country": {
+        "name_de": "Moldawien\u00a0(Republik Moldau)", 
+        "name": "Moldova", 
+        "id": "MDA"
+      }, 
+      "score": "15.1", 
+      "DT_RowClass": "moderate", 
+      "mortality": "3.1"
+    }, 
+    {
+      "undernourished": "34.8", 
+      "stunting": "55.6*", 
+      "zone": "EAF", 
+      "wasting": "10.9*", 
+      "country": {
+        "name_de": "Madagaskar", 
+        "name": "Madagascar", 
+        "id": "MDG"
+      }, 
+      "score": "44.2", 
+      "DT_RowClass": "alarming", 
+      "mortality": "10.9"
+    }, 
+    {
+      "undernourished": "4.4*", 
+      "stunting": "21.7", 
+      "zone": "CAR", 
+      "wasting": "2.3", 
+      "country": {
+        "name_de": "Mexiko", 
+        "name": "Mexico", 
+        "id": "MEX"
+      }, 
+      "score": "10.8", 
+      "DT_RowClass": "moderate", 
+      "mortality": "2.6"
+    }, 
+    {
+      "undernourished": "8.4*", 
+      "stunting": "8", 
+      "zone": "EEFSU", 
+      "wasting": "1.7", 
+      "country": {
+        "name_de": "Mazedonien, Ehem. Jugoslawische Republik\u00a0[2b]", 
+        "name": "Macedonia, FYR", 
+        "id": "MKD"
+      }, 
+      "score": "7.9", 
+      "DT_RowClass": "low", 
+      "mortality": "1.6"
+    }, 
+    {
+      "undernourished": "13.9", 
+      "stunting": "42.7", 
+      "zone": "WAF", 
+      "wasting": "12.6", 
+      "country": {
+        "name_de": "Mali", 
+        "name": "Mali", 
+        "id": "MLI"
+      }, 
+      "score": "43.9", 
+      "DT_RowClass": "alarming", 
+      "mortality": "22"
+    }, 
+    {
+      "undernourished": "52.4", 
+      "stunting": "40.8", 
+      "zone": "SEA", 
+      "wasting": "10.7", 
+      "country": {
+        "name_de": "Myanmar\u00a0(Burma)", 
+        "name": "Myanmar", 
+        "id": "MMR"
+      }, 
+      "score": "45.3", 
+      "DT_RowClass": "alarming", 
+      "mortality": "8.2"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "-", 
+      "zone": "EEFSU", 
+      "wasting": "-", 
+      "country": {
+        "name_de": "Montenegro", 
+        "name": "Montenegro", 
+        "id": "MNE"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "-"
+    }, 
+    {
+      "undernourished": "38.2", 
+      "stunting": "29.8", 
+      "zone": "SEA", 
+      "wasting": "7.1", 
+      "country": {
+        "name_de": "Mongolei", 
+        "name": "Mongolia", 
+        "id": "MNG"
+      }, 
+      "score": "33", 
+      "DT_RowClass": "serious", 
+      "mortality": "6.3"
+    }, 
+    {
+      "undernourished": "42", 
+      "stunting": "49.6", 
+      "zone": "EAF", 
+      "wasting": "6.8", 
+      "country": {
+        "name_de": "Mosambik", 
+        "name": "Mozambique", 
+        "id": "MOZ"
+      }, 
+      "score": "49.4", 
+      "DT_RowClass": "alarming", 
+      "mortality": "17.1"
+    }, 
+    {
+      "undernourished": "11.5", 
+      "stunting": "39.5", 
+      "zone": "WAF", 
+      "wasting": "15.3", 
+      "country": {
+        "name_de": "Mauretanien", 
+        "name": "Mauritania", 
+        "id": "MRT"
+      }, 
+      "score": "33.6", 
+      "DT_RowClass": "serious", 
+      "mortality": "11.4"
+    }, 
+    {
+      "undernourished": "7.1", 
+      "stunting": "12.9*", 
+      "zone": "EAF", 
+      "wasting": "15*", 
+      "country": {
+        "name_de": "Mauritius", 
+        "name": "Mauritius", 
+        "id": "MUS"
+      }, 
+      "score": "16.2", 
+      "DT_RowClass": "moderate", 
+      "mortality": "1.9"
+    }, 
+    {
+      "undernourished": "28.6", 
+      "stunting": "54.6", 
+      "zone": "EAF", 
+      "wasting": "6.8", 
+      "country": {
+        "name_de": "Malawi", 
+        "name": "Malawi", 
+        "id": "MWI"
+      }, 
+      "score": "45.3", 
+      "DT_RowClass": "alarming", 
+      "mortality": "17.4"
+    }, 
+    {
+      "undernourished": "2.6*", 
+      "stunting": "20.7", 
+      "zone": "SEA", 
+      "wasting": "15.3", 
+      "country": {
+        "name_de": "Malaysia", 
+        "name": "Malaysia", 
+        "id": "MYS"
+      }, 
+      "score": "15.5", 
+      "DT_RowClass": "moderate", 
+      "mortality": "1"
+    }, 
+    {
+      "undernourished": "30.4", 
+      "stunting": "29.5", 
+      "zone": "CSAF", 
+      "wasting": "10", 
+      "country": {
+        "name_de": "Namibia", 
+        "name": "Namibia", 
+        "id": "NAM"
+      }, 
+      "score": "32.5", 
+      "DT_RowClass": "serious", 
+      "mortality": "7.6"
+    }, 
+    {
+      "undernourished": "22.8", 
+      "stunting": "54.2", 
+      "zone": "WAF", 
+      "wasting": "16.2", 
+      "country": {
+        "name_de": "Niger", 
+        "name": "Niger", 
+        "id": "NER"
+      }, 
+      "score": "53", 
+      "DT_RowClass": "extra-alarming", 
+      "mortality": "22.7"
+    }, 
+    {
+      "undernourished": "9.2", 
+      "stunting": "39.7", 
+      "zone": "WAF", 
+      "wasting": "17.6", 
+      "country": {
+        "name_de": "Nigeria", 
+        "name": "Nigeria", 
+        "id": "NGA"
+      }, 
+      "score": "40.9", 
+      "DT_RowClass": "alarming", 
+      "mortality": "18.7"
+    }, 
+    {
+      "undernourished": "34.8", 
+      "stunting": "25.2", 
+      "zone": "CAR", 
+      "wasting": "2.3", 
+      "country": {
+        "name_de": "Nicaragua", 
+        "name": "Nicaragua", 
+        "id": "NIC"
+      }, 
+      "score": "25.6", 
+      "DT_RowClass": "serious", 
+      "mortality": "4"
+    }, 
+    {
+      "undernourished": "22.2", 
+      "stunting": "57.1", 
+      "zone": "SEA", 
+      "wasting": "11.3", 
+      "country": {
+        "name_de": "Nepal", 
+        "name": "Nepal", 
+        "id": "NPL"
+      }, 
+      "score": "36.8", 
+      "DT_RowClass": "alarming", 
+      "mortality": "8.1"
+    }, 
+    {
+      "undernourished": "13.2", 
+      "stunting": "12.9", 
+      "zone": "MENA", 
+      "wasting": "7.3", 
+      "country": {
+        "name_de": "Oman", 
+        "name": "Oman", 
+        "id": "OMN"
+      }, 
+      "score": "14.2", 
+      "DT_RowClass": "moderate", 
+      "mortality": "1.7"
+    }, 
+    {
+      "undernourished": "22.4", 
+      "stunting": "41.5", 
+      "zone": "SEA", 
+      "wasting": "14.2", 
+      "country": {
+        "name_de": "Pakistan", 
+        "name": "Pakistan", 
+        "id": "PAK"
+      }, 
+      "score": "37.8", 
+      "DT_RowClass": "alarming", 
+      "mortality": "11.2"
+    }, 
+    {
+      "undernourished": "27.4", 
+      "stunting": "22.3*", 
+      "zone": "CAR", 
+      "wasting": "1.3*", 
+      "country": {
+        "name_de": "Panama", 
+        "name": "Panama", 
+        "id": "PAN"
+      }, 
+      "score": "19.9", 
+      "DT_RowClass": "moderate", 
+      "mortality": "2.6"
+    }, 
+    {
+      "undernourished": "21.6", 
+      "stunting": "31.3", 
+      "zone": "SA", 
+      "wasting": "1.1", 
+      "country": {
+        "name_de": "Peru", 
+        "name": "Peru", 
+        "id": "PER"
+      }, 
+      "score": "20.8", 
+      "DT_RowClass": "serious", 
+      "mortality": "3.9"
+    }, 
+    {
+      "undernourished": "21.3", 
+      "stunting": "38.3", 
+      "zone": "SEA", 
+      "wasting": "8", 
+      "country": {
+        "name_de": "Philippinen", 
+        "name": "Philippines", 
+        "id": "PHL"
+      }, 
+      "score": "26.2", 
+      "DT_RowClass": "serious", 
+      "mortality": "4"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "48*", 
+      "zone": "SEA", 
+      "wasting": "8.3*", 
+      "country": {
+        "name_de": "Papua-Neuguinea", 
+        "name": "Papua New Guinea", 
+        "id": "PNG"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "7.9"
+    }, 
+    {
+      "undernourished": "37.9", 
+      "stunting": "51", 
+      "zone": "SEA", 
+      "wasting": "12.2", 
+      "country": {
+        "name_de": "Korea, Demokratische Volksrepublik\u00a0(Nordkorea)", 
+        "name": "North Korea", 
+        "id": "PRK"
+      }, 
+      "score": "40.4", 
+      "DT_RowClass": "alarming", 
+      "mortality": "6"
+    }, 
+    {
+      "undernourished": "13.3", 
+      "stunting": "17.7*", 
+      "zone": "SA", 
+      "wasting": "2.2*", 
+      "country": {
+        "name_de": "Paraguay", 
+        "name": "Paraguay", 
+        "id": "PRY"
+      }, 
+      "score": "14.2", 
+      "DT_RowClass": "moderate", 
+      "mortality": "3.4"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "3.1*", 
+      "zone": "MENA", 
+      "wasting": "2.7*", 
+      "country": {
+        "name_de": "Katar", 
+        "name": "Qatar", 
+        "id": "QAT"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "1.2"
+    }, 
+    {
+      "undernourished": "1.4*", 
+      "stunting": "12.8", 
+      "zone": "EEFSU", 
+      "wasting": "4.3", 
+      "country": {
+        "name_de": "Rum\u00e4nien", 
+        "name": "Romania", 
+        "id": "ROU"
+      }, 
+      "score": "8.6", 
+      "DT_RowClass": "low", 
+      "mortality": "2.7"
+    }, 
+    {
+      "undernourished": "4.9*", 
+      "stunting": "15.9*", 
+      "zone": "EEFSU", 
+      "wasting": "4.4*", 
+      "country": {
+        "name_de": "Russische F\u00f6deration", 
+        "name": "Russian Federation", 
+        "id": "RUS"
+      }, 
+      "score": "10.5", 
+      "DT_RowClass": "moderate", 
+      "mortality": "2.3"
+    }, 
+    {
+      "undernourished": "60.6", 
+      "stunting": "47.5", 
+      "zone": "EAF", 
+      "wasting": "8.3", 
+      "country": {
+        "name_de": "Ruanda", 
+        "name": "Rwanda", 
+        "id": "RWA"
+      }, 
+      "score": "58.7", 
+      "DT_RowClass": "extra-alarming", 
+      "mortality": "18.4"
+    }, 
+    {
+      "undernourished": "1.2*", 
+      "stunting": "15.5*", 
+      "zone": "MENA", 
+      "wasting": "7.3*", 
+      "country": {
+        "name_de": "Saudi-Arabien", 
+        "name": "Saudi Arabia", 
+        "id": "SAU"
+      }, 
+      "score": "10.4", 
+      "DT_RowClass": "moderate", 
+      "mortality": "2.3"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "-", 
+      "zone": "EAF", 
+      "wasting": "-", 
+      "country": {
+        "name_de": "Sudan", 
+        "name": "Sudan", 
+        "id": "SDN"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "-"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "-", 
+      "zone": "EAF", 
+      "wasting": "-", 
+      "country": {
+        "name_de": "S\u00fcdsudan", 
+        "name": "South Sudan", 
+        "id": "SSD"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "-"
+    }, 
+    {
+      "undernourished": "29.4", 
+      "stunting": "29.5", 
+      "zone": "WAF", 
+      "wasting": "10", 
+      "country": {
+        "name_de": "Senegal", 
+        "name": "Senegal", 
+        "id": "SEN"
+      }, 
+      "score": "37.7", 
+      "DT_RowClass": "alarming", 
+      "mortality": "13.5"
+    }, 
+    {
+      "undernourished": "38", 
+      "stunting": "38.4", 
+      "zone": "WAF", 
+      "wasting": "11.6", 
+      "country": {
+        "name_de": "Sierra Leone", 
+        "name": "Sierra Leone", 
+        "id": "SLE"
+      }, 
+      "score": "53.9", 
+      "DT_RowClass": "extra-alarming", 
+      "mortality": "23.6"
+    }, 
+    {
+      "undernourished": "12.5", 
+      "stunting": "32.3", 
+      "zone": "CAR", 
+      "wasting": "1.5", 
+      "country": {
+        "name_de": "El Salvador", 
+        "name": "El Salvador", 
+        "id": "SLV"
+      }, 
+      "score": "16.8", 
+      "DT_RowClass": "moderate", 
+      "mortality": "3.2"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "29.2", 
+      "zone": "EAF", 
+      "wasting": "19.3", 
+      "country": {
+        "name_de": "Somalia", 
+        "name": "Somalia", 
+        "id": "SOM"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "17.4"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "-", 
+      "zone": "EEFSU", 
+      "wasting": "-", 
+      "country": {
+        "name_de": "Serbien", 
+        "name": "Serbia", 
+        "id": "SRB"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "-"
+    }, 
+    {
+      "undernourished": "14.1", 
+      "stunting": "14.5", 
+      "zone": "SA", 
+      "wasting": "7", 
+      "country": {
+        "name_de": "Suriname", 
+        "name": "Suriname", 
+        "id": "SUR"
+      }, 
+      "score": "16.5", 
+      "DT_RowClass": "moderate", 
+      "mortality": "3.4"
+    }, 
+    {
+      "undernourished": "5.4*", 
+      "stunting": "9*", 
+      "zone": "EEFSU", 
+      "wasting": "3.9*", 
+      "country": {
+        "name_de": "Slowakei", 
+        "name": "Slovak Republic", 
+        "id": "SVK"
+      }, 
+      "score": "7.7", 
+      "DT_RowClass": "low", 
+      "mortality": "1.2"
+    }, 
+    {
+      "undernourished": "21.7", 
+      "stunting": "36.6", 
+      "zone": "CSAF", 
+      "wasting": "1.7", 
+      "country": {
+        "name_de": "Swasiland", 
+        "name": "Swaziland", 
+        "id": "SWZ"
+      }, 
+      "score": "30.9", 
+      "DT_RowClass": "serious", 
+      "mortality": "12.8"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "24.3", 
+      "zone": "MENA", 
+      "wasting": "4.9", 
+      "country": {
+        "name_de": "Syrien, Arabische Republik", 
+        "name": "Syrian Arab Republic", 
+        "id": "SYR"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "2.3"
+    }, 
+    {
+      "undernourished": "40.1", 
+      "stunting": "39.3", 
+      "zone": "CSAF", 
+      "wasting": "13.9", 
+      "country": {
+        "name_de": "Tschad", 
+        "name": "Chad", 
+        "id": "TCD"
+      }, 
+      "score": "51.9", 
+      "DT_RowClass": "extra-alarming", 
+      "mortality": "19"
+    }, 
+    {
+      "undernourished": "29.2", 
+      "stunting": "33.2", 
+      "zone": "WAF", 
+      "wasting": "12.4", 
+      "country": {
+        "name_de": "Togo", 
+        "name": "Togo", 
+        "id": "TGO"
+      }, 
+      "score": "38.5", 
+      "DT_RowClass": "alarming", 
+      "mortality": "12.1"
+    }, 
+    {
+      "undernourished": "19", 
+      "stunting": "19.5*", 
+      "zone": "SEA", 
+      "wasting": "6.4*", 
+      "country": {
+        "name_de": "Thailand", 
+        "name": "Thailand", 
+        "id": "THA"
+      }, 
+      "score": "18.3", 
+      "DT_RowClass": "moderate", 
+      "mortality": "2.3"
+    }, 
+    {
+      "undernourished": "38.8", 
+      "stunting": "42.1", 
+      "zone": "EEFSU", 
+      "wasting": "9.4", 
+      "country": {
+        "name_de": "Tadschikistan", 
+        "name": "Tajikistan", 
+        "id": "TJK"
+      }, 
+      "score": "40.3", 
+      "DT_RowClass": "alarming", 
+      "mortality": "9.3"
+    }, 
+    {
+      "undernourished": "9", 
+      "stunting": "28.1", 
+      "zone": "EEFSU", 
+      "wasting": "7.1", 
+      "country": {
+        "name_de": "Turkmenistan", 
+        "name": "Turkmenistan", 
+        "id": "TKM"
+      }, 
+      "score": "22.2", 
+      "DT_RowClass": "serious", 
+      "mortality": "8.2"
+    }, 
+    {
+      "undernourished": "-", 
+      "stunting": "55.7", 
+      "zone": "SEA", 
+      "wasting": "13.7", 
+      "country": {
+        "name_de": "Osttimor", 
+        "name": "Timor-Leste", 
+        "id": "TLS"
+      }, 
+      "score": "-", 
+      "DT_RowClass": "no-data", 
+      "mortality": "-"
+    }, 
+    {
+      "undernourished": "13", 
+      "stunting": "5.3", 
+      "zone": "SA", 
+      "wasting": "5.2", 
+      "country": {
+        "name_de": "Trinidad und Tobago", 
+        "name": "Trinidad & Tobago", 
+        "id": "TTO"
+      }, 
+      "score": "12.3", 
+      "DT_RowClass": "moderate", 
+      "mortality": "2.9"
+    }, 
+    {
+      "undernourished": "0.8*", 
+      "stunting": "16.8", 
+      "zone": "MENA", 
+      "wasting": "2.9", 
+      "country": {
+        "name_de": "Tunesien", 
+        "name": "Tunisia", 
+        "id": "TUN"
+      }, 
+      "score": "9", 
+      "DT_RowClass": "low", 
+      "mortality": "3.2"
+    }, 
+    {
+      "undernourished": "0.8*", 
+      "stunting": "19.1", 
+      "zone": "MENA", 
+      "wasting": "3", 
+      "country": {
+        "name_de": "T\u00fcrkei", 
+        "name": "Turkey", 
+        "id": "TUR"
+      }, 
+      "score": "10.4", 
+      "DT_RowClass": "moderate", 
+      "mortality": "4"
+    }, 
+    {
+      "undernourished": "36.8", 
+      "stunting": "48.3", 
+      "zone": "EAF", 
+      "wasting": "5.6", 
+      "country": {
+        "name_de": "Tansania, Vereinigte Republik", 
+        "name": "Tanzania", 
+        "id": "TZA"
+      }, 
+      "score": "42.4", 
+      "DT_RowClass": "alarming", 
+      "mortality": "13.1"
+    }, 
+    {
+      "undernourished": "28.4", 
+      "stunting": "44.8", 
+      "zone": "EAF", 
+      "wasting": "5", 
+      "country": {
+        "name_de": "Uganda", 
+        "name": "Uganda", 
+        "id": "UGA"
+      }, 
+      "score": "39.4", 
+      "DT_RowClass": "alarming", 
+      "mortality": "14.8"
+    }, 
+    {
+      "undernourished": "4.1*", 
+      "stunting": "22.9", 
+      "zone": "EEFSU", 
+      "wasting": "8.2", 
+      "country": {
+        "name_de": "Ukraine", 
+        "name": "Ukraine", 
+        "id": "UKR"
+      }, 
+      "score": "13.5", 
+      "DT_RowClass": "moderate", 
+      "mortality": "1.9"
+    }, 
+    {
+      "undernourished": "4*", 
+      "stunting": "12.8", 
+      "zone": "SA", 
+      "wasting": "2.3", 
+      "country": {
+        "name_de": "Uruguay", 
+        "name": "Uruguay", 
+        "id": "URY"
+      }, 
+      "score": "7.6", 
+      "DT_RowClass": "low", 
+      "mortality": "1.7"
+    }, 
+    {
+      "undernourished": "11.5", 
+      "stunting": "25.3", 
+      "zone": "EEFSU", 
+      "wasting": "8.9", 
+      "country": {
+        "name_de": "Usbekistan", 
+        "name": "Uzbekistan", 
+        "id": "UZB"
+      }, 
+      "score": "21.8", 
+      "DT_RowClass": "serious", 
+      "mortality": "6.3"
+    }, 
+    {
+      "undernourished": "16.6", 
+      "stunting": "17.4", 
+      "zone": "SA", 
+      "wasting": "3.9", 
+      "country": {
+        "name_de": "Venezuela", 
+        "name": "Venezuela, RB", 
+        "id": "VEN"
+      }, 
+      "score": "15.3", 
+      "DT_RowClass": "moderate", 
+      "mortality": "2.2"
+    }, 
+    {
+      "undernourished": "28.1", 
+      "stunting": "43", 
+      "zone": "SEA", 
+      "wasting": "9", 
+      "country": {
+        "name_de": "Vietnam", 
+        "name": "Vietnam", 
+        "id": "VNM"
+      }, 
+      "score": "30.2", 
+      "DT_RowClass": "serious", 
+      "mortality": "3.4"
+    }, 
+    {
+      "undernourished": "29.6", 
+      "stunting": "54.6*", 
+      "zone": "MENA", 
+      "wasting": "15.8*", 
+      "country": {
+        "name_de": "Jemen", 
+        "name": "Yemen, Rep.", 
+        "id": "YEM"
+      }, 
+      "score": "43.2", 
+      "DT_RowClass": "alarming", 
+      "mortality": "9.5"
+    }, 
+    {
+      "undernourished": "4.6*", 
+      "stunting": "30.1", 
+      "zone": "CSAF", 
+      "wasting": "4.5", 
+      "country": {
+        "name_de": "S\u00fcdafrika", 
+        "name": "South Africa", 
+        "id": "ZAF"
+      }, 
+      "score": "18.7", 
+      "DT_RowClass": "moderate", 
+      "mortality": "7.5"
+    }, 
+    {
+      "undernourished": "42.9", 
+      "stunting": "57.9", 
+      "zone": "EAF", 
+      "wasting": "5.7", 
+      "country": {
+        "name_de": "Sambia", 
+        "name": "Zambia", 
+        "id": "ZMB"
+      }, 
+      "score": "50.4", 
+      "DT_RowClass": "extra-alarming", 
+      "mortality": "16.3"
+    }, 
+    {
+      "undernourished": "43.7", 
+      "stunting": "33.7", 
+      "zone": "EAF", 
+      "wasting": "8.5", 
+      "country": {
+        "name_de": "Simbabwe", 
+        "name": "Zimbabwe", 
+        "id": "ZWE"
+      }, 
+      "score": "41", 
+      "DT_RowClass": "alarming", 
+      "mortality": "10.6"
+    }
+  ]
+}

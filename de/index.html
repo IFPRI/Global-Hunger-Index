@@ -1,0 +1,250 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2016 Welthunger-Index</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../styles/leaflet.css">    
+  <link rel="stylesheet" href="../fonts/foundation-icons/foundation-icons.css" />    
+  <link rel="stylesheet" href="../styles/app.css">
+
+
+  <script src="../scripts/modernizr.js"></script>
+  
+  <meta property="og:title" content="2016 Welthunger-Index" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  
+    <meta property="og:image" content="http://ghi.ifpri.org/images/share-de.png" />
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2016 Welthunger-Index" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:url" content="" />
+  
+    <meta property="twitter:image" content="http://ghi.ifpri.org/images/share-de.png" />
+  
+
+
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon-180x180.png">
+  
+  <meta name="application-name" content="2016 Welthunger-Index">
+  <meta name="msapplication-TileColor" content="#333333">
+  <meta name="msapplication-TileImage" content="../images/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" sizes="192x192" href="../images/android-chrome-192x192.png">
+  <link rel="icon" sizes="16x16" href="../images/favicon.ico">
+</head>
+<body>
+  
+    <img src="../images/ghi-share-de.png" class="hide">
+  
+
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="../de/">
+            <img src="../images/ghi.svg" onerror="this.src='../images/ghi.png'" alt="2016 Welthunger-Index">
+            <span>2016 Welthunger-Index</span>
+          </a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="has-dropdown"> <a href="#">Sprache</a>
+          <ul class="dropdown">
+            <li><a href="../">Englisch </a></li>
+            <li class="active"><a href="../de/">Deutsch</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><a href="../de/trends/">Index</a></li>
+        <li><a href="../de/results/">Ergebnisse</a></li>
+        <li><a href="../de/methodology/">Methodik</a></li>
+        <li><a href="../de/hunger/">Hunger</a></li>
+        <li><a href="../de/about/">Über den WHI</a></li>
+        <li><a href="../de/contact/">Kontakt</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  
+
+<div id="shareModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <div class="row">
+      <div class="large-6 columns">
+        <h4> Teilen </h4>
+        <p> Teile diese Grafik mit anderen in deinen sozialen Netzwerken </p>
+        <p>
+		 <a target="_blank" class="twitter-share-button" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.welthungerhilfe.de%2Fwelthungerindex-karte.html&amp;text=Weltweit hat sich der WHI-Wert 2016 um 29 percent verbessert. Mehr auf der interaktiven App&amp;hashtags=GHI2016"><i class="fi-social-twitter large"></i></a> 
+         <a target="_blank" class="fb-share-button" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.welthungerhilfe.de%2Fwelthungerindex-karte.html"><i class="fi-social-facebook large"></i></a>
+        </p>
+      </div>
+      <div class="large-6 columns">      
+        <h4> Einbetten </h4>
+        <p> Nutze den folgenden Code, um die Grafik einzubetten  </p>
+        <textarea><iframe src="" width="100%" height="600" frameborder="0" allowfullscreen></iframe></textarea>
+      </div>
+    </div>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<div id="main-map" class="row collapse full-width">
+  <div class="large-8 columns">
+    <div id="map-application" class="row">
+      <div id="map" class="map"></div>
+    </div>
+    <div id="map-legend" class="row">
+      <ul class="ghi-levels large-block-grid-7 medium-block-grid-4 small-block-grid-3">
+        <li class="extra-alarming"><i class="fi-stop small"></i> Gravierend <em>&ge; 50</em></li>
+        <li class="alarming"><i class="fi-stop small"></i> Sehr ernst <em>35.0-49.9</em></li>
+        <li class="serious"><i class="fi-stop small"></i> Ernst <em>20.0-34.9</em></li>
+        <li class="moderate"><i class="fi-stop small"></i> Mäßig  <em>10.0-19.9</em></li>
+        <li class="low"><i class="fi-stop small"></i> Wenig <em>&le; 9.9</em></li>
+        <li class="no-data"><i class="fi-stop small"></i> Keine Angaben </li>
+        <li class="indust-country"><i class="fi-stop small"></i> Nicht berechnet </li>
+      </ul>
+    </div>
+  </div>
+  <div class="table-wrapper large-4 columns">
+    <div class="row">
+      <div class="large-12 columns year-select">
+        <strong>Ranking </strong>
+        <button id="year-button" href="#" data-dropdown="year-drop" aria-controls="year-drop" aria-expanded="false" class="dropdown">2016</button>
+        <ul id="year-drop" data-dropdown-content class="f-dropdown" aria-hidden="true">
+          <li><a class="2016" href="#">2016</a></li>
+          <li><a class="2008" href="#">2008</a></li>
+          <li><a class="2000" href="#">2000</a></li>
+          <li><a class="1992" href="#">1992</a></li>
+        </ul>
+        <a class="button right tiny secondary radius" href="#" data-reveal-id="shareModal">
+          <i class="fi-share"></i> Teilen/Einbetten
+        </a>
+      </div>
+      <p class="large-12 columns">WHI-Werte nach Ländern, von den höchsten zu den niedrigsten</p>
+    </div>
+    <div class="row">
+      <div id="table-container">
+        <table id="country-table" class="display" width="100%" cellspacing="0">
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="home-blocks" class="spaced-row">
+  <div class="row">
+    <a class="medium-4 columns" href="../de/trends/">
+      <div>
+        <h3>Index</h3>
+        <p>Entdecke den Welthunger-Index</p>
+      </div>
+    </a><!-- /Block -->
+    <a class="medium-4 columns" href="../de/results/">
+      <div>
+        <h3>Ergebnisse</h3>
+        <p>Lerne mehr über globale, regionale und nationale Hungerwerte</p>
+      </div>
+    </a><!-- /Block -->
+    <a class="medium-4 columns" href="../de/hunger/">
+      <div>
+        <h3>Hunger</h3>
+        <p>Lerne mehr über die verschiedenen Arten von Hunger</p>
+      </div>
+    </a><!-- /Block -->
+  </div>
+  <div class="row">
+    <a class="medium-4 columns" href="../de/methodology/">
+      <div>
+        <h3>Methodik</h3>
+        <p>Wie wird der Welthunger-Index berechnet?</p>
+      </div>
+    </a><!-- /Block -->
+    <a class="medium-4 columns" href="../de/about/">
+      <div>
+        <h3>Über den WHI</h3>
+        <p>Was ist der Welthunger-Index? </p>
+      </div>
+    </a><!-- /Block -->
+    <a class="medium-4 columns" href="../de/contact/">
+      <div>
+        <h3>Kontakt</h3>
+        <p>Kontakt</p>
+      </div>
+    </a><!-- /Block -->
+  </div>
+</section><!-- /#Home Blocks -->
+
+
+
+  <div id="footer">
+    <div class="row">
+      <div class="medium-8 medium-8 columns">
+        <ul class="orgs">
+          <li><a target="_blank" href="http://www.ifpri.org"><img src="../images/ifpri_white.png"></a></li>
+          <li><a target="_blank" href="https://www.concern.net"><img src="../images/concern-worldwide_white.png"></a></li>
+          <li><a target="_blank" href="http://www.welthungerhilfe.de/en/home-en.html"><img src="../images/welthungerhilfe_white.png"></a></li>
+        </ul>
+      </div>
+      <div class="medium-4 medium-4 columns">
+        <ul class="credits">
+          <li><i class="fi-eye small"></i> <a target="_blank" href="https://github.com/IFPRI/Global-Hunger-Index">Quellcode</a></li>
+          <li><i class="fi-heart small"></i> Erstellt von <a target="_blank" href="http://jplusplus.org">Journalism++</a></li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- /#Footer -->  
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="../scripts/jquery.js"></script>
+  <script src="../scripts/foundation.min.js"></script>
+  <script src="../scripts/foundation-scripts.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  
+<link rel="stylesheet" href="../styles/leaflet.zoomin.css" media="screen">
+
+<script src="../scripts/leaflet.js"></script>
+<script src="../scripts/leaflet.ajax.min.js"></script>
+<script src="../scripts/leaflet.zoomin.js"></script>
+<script src="../scripts/spin.min.js"></script>
+<script src="../scripts/leaflet.spin.js"></script>
+<script src="../scripts/main.js"></script>
+
+
+  <!-- endbuild -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-35984661-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body>
+</html>
