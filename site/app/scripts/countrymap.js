@@ -159,9 +159,9 @@ var messages_de = {
   // https://gis.stackexchange.com/a/102125
   var jsonfile;
   if (window.location.href.indexOf('/de') > -1) {
-    jsonfile = '../../../data/countrydata-2015.geo.json';
+    jsonfile = '../../../data/countrydata-2016.geo.json';
   } else {
-    jsonfile = '../../data/countrydata-2015.geo.json';
+    jsonfile = '../../data/countrydata-2016.geo.json';
   }
   geojsonLayer = new L.GeoJSON.AJAX(jsonfile, {
     style: style,

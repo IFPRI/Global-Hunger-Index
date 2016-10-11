@@ -183,7 +183,7 @@ var messages_de = {
   if (window.location.href.indexOf('embed') > -1) {
     urlbase += '../';
   }
-  var jsonfile = urlbase + 'data/countrydata-2015.geo.json';
+  var jsonfile = urlbase + 'data/countrydata-2016.geo.json';
   geojsonLayer = new L.GeoJSON.AJAX(jsonfile, {
     style: style,
     onEachFeature: onEachFeature
@@ -260,7 +260,7 @@ var messages_de = {
     if (window.location.href.indexOf('embed') > -1) {
       urlbase += '../';
     }
-    populateTable('2015');
+    populateTable('2016');
     $('#year-drop li a').click( function() {
       // year dropdown refreshes map
       var year = this.className;

@@ -66,9 +66,8 @@
         <h4> {{ m.share_title }} </h4>
         <p> {{ m.share_description }} </p>
         <p>
-          <!-- <a target="_blank" class="twitter-share-button" href="https://twitter.com/intent/tweet?url={{ m.encoded_share_url }}&amp;text={{ m.tweet_share_text }}"><i class="fi-social-twitter large"></i></a> -->
-		  <a target="_blank" class="twitter-share-button" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fghi.ifpri.org&text=Global%20GHI%20scores%20have%20declined%20by%2029%25%20in%202016.%20See%20the%20interactive%20app&hashtags=%23GHI2016&"><i class="fi-social-twitter large"></i></a>
-          <a target="_blank" class="fb-share-button" href="https://www.facebook.com/sharer/sharer.php?u={{ m.encoded_share_url }}"><i class="fi-social-facebook large"></i></a>
+		 <a target="_blank" class="twitter-share-button" href="https://twitter.com/intent/tweet?url={{ m.encoded_share_url }}&amp;text={{ m.tweet_share_text }}&amp;hashtags={{m.tweet_share_hashtag }}"><i class="fi-social-twitter large"></i></a> 	
+         <a target="_blank" class="fb-share-button" href="https://www.facebook.com/sharer/sharer.php?u={{ m.encoded_share_url }}"><i class="fi-social-facebook large"></i></a>
         </p>
       </div>
       <div class="large-6 columns">      
