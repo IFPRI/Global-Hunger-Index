@@ -3,9 +3,9 @@ Für weitere Informationen über den Welthunger-Index 2016 wenden Sie sich bitte
 
 **International Food Policy Research Institute**  
 Pressekontakt  
-Daniel Burnett  
-Telefon: +1 202 627 4311  
-E-Mail: d.burnett@cgiar.org  
+Drew Sample  
+Telefon: +1 202 549 5920  
+E-Mail: d.sample@cgiar.org  
 
 Für weitere Fragen:
 E-Mail: IFPRI-Data@cgiar.org

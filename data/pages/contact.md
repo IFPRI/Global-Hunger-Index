@@ -3,9 +3,9 @@ For more information about the 2016 Global Hunger Index, please contact:
 
 **International Food Policy Research Institute**  
 For media contact:  
-Daniel Burnett  
-Tel: +1 202 627 4311  
-Email: d.burnett@cgiar.org  
+Drew Sample  
+Tel: +1 202 549 5920  
+Email: d.sample@cgiar.org  
 
 For other questions:  
 Email: IFPRI-Data@cgiar.org
