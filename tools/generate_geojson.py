@@ -149,7 +149,7 @@ zones = list(csv.DictReader(open("../data/regions.csv", "r")))
 for year in years:
     year = str(year)
     entries = []
-    for row in table_entries:
+    for row in table_entries:        
         # fill out necessary fields
         from render_templates import get_level_from_score
         entry = {
@@ -165,7 +165,7 @@ for year in years:
         entry["undernourished"] += "*" if row["details"]["undernourished_" + year]["estimate"] else ""
         entry["stunting"] += "*" if row["details"]["stunting_" + year]["estimate"] else ""
         entry["wasting"] += "*" if row["details"]["wasting_" + year]["estimate"] else ""
-        # fetch this country's zone
+        # fetch this country's zone        
         for z in zones:
             if z['code'] == entry["country"]["id"]:
                 entry['zone'] = z['zonecode']

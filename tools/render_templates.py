@@ -33,7 +33,7 @@ messages_de = {label: text_de for label, text, text_de in csvdata}
 
 def get_level_from_score(score):
     level = ""
-    if score in ("-", "null"):
+    if score in ("-", "null",""):
         level = "no-data"
     elif score == "<5":
         level = "low"
@@ -55,7 +55,7 @@ def get_level_from_score(score):
 def get_verbose_level_from_score(score, lang="en"):
     level = ""
     if lang == "de":
-        if score in ("-", 'null'):
+        if score in ("-", 'null',""):
             level = "Keine Angaben"
         elif score == "<5":
             level = "Wenig"
@@ -73,7 +73,7 @@ def get_verbose_level_from_score(score, lang="en"):
             print "Unexpected score: ", score
             level = "???"
     else:
-        if score in ("-", 'null'):
+        if score in ("-", 'null',""):
             level = "No data"
         elif score == "<5":
             level = "Low"
