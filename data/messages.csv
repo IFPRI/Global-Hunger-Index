@@ -28,8 +28,9 @@ map_alarming,Alarming,Sehr ernst
 map_serious,Serious,Ernst
 map_moderate,Moderate,Mäßig 
 map_low,Low,Wenig
-map_no_data,No data,Keine Angaben
-map_not_calculated,Not calculated,Nicht berechnet
+map_no_data_sig_concern,"Insuficient data, significant concern","Unzureichende Daten, Anlass zu erheblicher Besorgnis"
+map_no_data,Insuficient data,Unzureichende Daten
+map_not_calculated,Indestrialized countries,Industrieland
 country_score_data,Country data (in %),Länderdaten (in %)
 country_score_undernourished,Proportion of undernourished in population (%),Anteil der Unterernährten an der Bevölkerung (%)
 country_score_stunting,Prevalence of stunting in children under five years (%),Anteil der ausgezehrten Kinder unter fünf Jahren (%)

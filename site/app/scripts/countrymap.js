@@ -2,8 +2,32 @@
 /*jshint camelcase: false */
 /*global L */
 
-function getColor(d) {
-  if (d === '-') { return '#808080'; }
+var no_data_sig_concern_country_list_2016 = ['BDI','COM','COD','ERI','LBY','PNG','SOM','SSD','SDN','SYR'];
+// Default Stripes.
+var stripes = null;
+
+function getPattern(cntry_id){
+	if( no_data_sig_concern_country_list_2016.indexOf(cntry_id) === -1 ) {
+	  return null; 
+	}
+    else  {
+		return stripes; 
+	}
+}	
+
+function getColor(d,cntry_id) {
+  //if (d === '-') { return '#808080'; }
+  //if (d === '-') { return 'blue'; }
+  if (d === '-' || d === '') { 
+    if( no_data_sig_concern_country_list_2016.indexOf(cntry_id) === -1 ) {
+		//console.log('0-cntry_id : ' + cntry_id);
+	  return '#808080'; 
+	}
+    else  {
+		//console.log('1-cntry_id : ' + cntry_id);
+		return 'black';//'#e9841d'; 
+	}
+  }
   if (d === '<5') { return '#4caf45'; }
   return d >= 50 ? '#ab0635' :
     d >= 35  ? '#e9841d' :
@@ -13,9 +37,17 @@ function getColor(d) {
     '#eaeaea';
 }
 
-function getSeverity(d, lang) {
+function getSeverity(d, lang,cntry_id) {
   if (lang === 'de') {
-    if (d === '-') { return 'Keine Angaben'; }
+    //if (d === '-') { return 'Keine Angaben'; }
+	if (d === '-') {
+      if( no_data_sig_concern_country_list_2016.indexOf(cntry_id) === -1 ) {
+	    return 'Unzureichende Daten'; 
+	  }
+	  else {
+		  return 'Unzureichende Daten, Anlass zu erheblicher Besorgnis'; 
+	  }
+	}
     if (d === '<5') { return 'Wenig'; }
     return d >= 50 ? 'Gravierend' :
       d >= 35  ? 'Sehr ernst' :
@@ -24,7 +56,15 @@ function getSeverity(d, lang) {
       d >= 0   ? 'Wenig' :
       'Nicht berechnet';
   } else {
-    if (d === '-') { return 'No data'; }
+    //if (d === '-') { return 'No data'; }
+	 if (d === '-') {
+      if( no_data_sig_concern_country_list_2016.indexOf(cntry_id) === -1 ) {
+	    return 'Insuficient data'; 
+	  }
+	  else {
+		  return 'Insuficient data, significant concern'; 
+	  }
+	}
     if (d === '<5') { return 'Low'; }
     return d >= 50 ? 'Extremely alarming' :
       d >= 35  ? 'Alarming' :
@@ -67,6 +107,15 @@ var messages_de = {
   });
   // map.addControl(new L.Control.ZoomMin())
 
+    //YJ: add stripe pattern
+  stripes = new L.StripePattern({			
+		color: 'darkgray',
+		spaceColor: '#e9841d',
+		spaceOpacity: 1,
+		angle: -45
+        });
+  stripes.addTo(map);
+  
   //new L.tileLayer('http://a{s}.acetate.geoiq.com/tiles/acetate-base/{z}/{x}/{y}.png', {
   new L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png', {
       subdomains: '0123',
@@ -77,7 +126,8 @@ var messages_de = {
 
   function style(feature) {
     return {
-      fillColor: getColor(feature.properties.score),
+      fillColor: getColor(feature.properties.score, feature.id),
+	  fillPattern: getPattern(feature.id),
       weight: feature.properties.score ? 1 : 0,
       opacity: 0.3,
       color: 'white',

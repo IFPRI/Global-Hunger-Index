@@ -96,7 +96,8 @@
           <li class="serious"><i class="fi-stop small"></i> {{ m.map_serious }} <em>20.0-34.9</em></li>
           <li class="moderate"><i class="fi-stop small"></i> {{ m.map_moderate }} <em>10.0-19.9</em></li>
           <li class="low"><i class="fi-stop small"></i> {{ m.map_low }} <em>&le; 9.9</em></li>
-          <li class="no-data"><i class="fi-stop small"></i> {{ m.map_no_data }} </li>
+          <li class="no-data-sig-concern"><i class="fi-stop small"></i> {{ m.map_no_data_sig_concern }} </li>
+		  <li class="no-data"><i class="fi-stop small"></i> {{ m.map_no_data }} </li>
           <li class="indust-country"><i class="fi-stop small"></i> {{ m.map_not_calculated }} </li>
         </ul>
       </div><!-- legend -->
@@ -142,6 +143,8 @@
   <script src="{{ relpath }}scripts/leaflet.js"></script>
   <script src="{{ relpath }}scripts/leaflet.ajax.min.js"></script>
   <script src="{{ relpath }}scripts/leaflet.zoomin.js"></script>
+  <!-- YJ add -->
+<script src="{{ relpath }}scripts/leaflet.pattern-src.js"></script>
   <script src="{{ relpath }}scripts/main.js"></script>
   <!-- end embed scripts -->
 

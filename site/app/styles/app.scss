@@ -66,6 +66,14 @@ $serious-light-orange: #fbe0c7;
 $moderate-light-green: #bedcb3;
 $low-green: #4caf45;
 $nodata-grey: #808080;
+$nodatasg-grey: red;/*not working*/
+/*$nodatasg-grey: repeating-linear-gradient(
+	45deg,
+	#606dbc,
+	#606dbc 10px,
+	#465298 10px,
+	#465298 20px
+);*/
 $notcalculated-grey: #eaeaea;
 
 /* Layout
@@ -157,6 +165,7 @@ body {
 			.moderate td.score span       { background-color: $moderate-light-green; }
 			.low td.score span            { background-color: $low-green; }
 			.no-data td.score span        { background-color: $nodata-grey; }
+			.no-data-sig-concern td.score span        { color: white; background: $nodatasg-grey; }
 			.indust-country td.score span { background-color: $notcalculated-grey; }
 			}    
         }
@@ -288,6 +297,9 @@ body {
     .moderate       .fi-stop { color: $moderate-light-green; }
     .low            .fi-stop { color: $low-green; }
     .no-data        .fi-stop { color: $nodata-grey; }
+	/*.no-data-sig-concern        .fi-stop { color: $nodatasg-grey; }*/
+	/*.no-data-sig-concern        .fi-stop { background-image: url('../images/insufficient.png'); background-size: 8px 8px;    background-repeat: no-repeat;  background-placement: bottom right; color:null;}*/
+	.no-data-sig-concern        .fi-stop { background-image: url('../images/insufficient.png'); background-size: 8px 8px;    background-repeat: no-repeat;  color:darkgray; }
     .indust-country .fi-stop { color: $notcalculated-grey; }
 }
 
@@ -460,6 +472,17 @@ body {
     
     p.severity strong {
         background-color: $nodata-grey;
+        padding: 0.2rem 0.45rem;
+        @include border-radius(10px);
+        }
+}
+
+#country-info.no-data-sig-concern {
+    em.severity,
+    #detailed-score tbody td { color: $nodatasg-grey; }
+    
+    p.severity strong {
+        background-color: $nodatasg-grey;
         padding: 0.2rem 0.45rem;
         @include border-radius(10px);
         }
@@ -666,9 +689,9 @@ body {
 
 @media #{$large-up} {    
     .ghi-levels li { padding-bottom: 0; }
-    .ghi-levels li.extra-alarming { width: 16.2857%; }
-    .ghi-levels li.indust-countries { width: 15.2857%; }
-    .ghi-levels li.no-data { width: 11.2857%; }
+    .ghi-levels li.extra-alarming { width: 13.2857%; }
+    .ghi-levels li.indust-countries { width: 10.2857%; }
+    .ghi-levels li.no-data { width: 10.2857%; }
     
     #home-blocks a.columns div { min-height: 8rem; }
 }

@@ -2,9 +2,33 @@
 /*jshint camelcase: false */
 /*global L */
 /*global $ */
+var no_data_sig_concern_country_list_2016 = ['BDI','COM','COD','ERI','LBY','PNG','SOM','SSD','SDN','SYR'];
+// Default Stripes.
+var stripes = null;
 
-function getColor(d) {
-  if (d === '-') { return '#808080'; }
+function getPattern(cntry_id){
+	if( no_data_sig_concern_country_list_2016.indexOf(cntry_id) === -1 ) {
+	  return null; 
+	}
+    else  {
+		return stripes; 
+	}
+}	
+		
+function getColor(d,cntry_id) {
+	//YJ: add parameter contry_id
+  //if (d === '-') { return '#808080'; }
+  //if (d === '-') { return 'repeating-linear-gradient(45deg,	#606dbc,	#606dbc 10px,	#465298 10px,	#465298 20px)'; }
+  if (d === '-' || d === '') { 
+    if( no_data_sig_concern_country_list_2016.indexOf(cntry_id) === -1 ) {
+		//console.log('0-cntry_id : ' + cntry_id);
+	  return '#808080'; 
+	}
+    else  {
+		//console.log('1-cntry_id : ' + cntry_id);
+		return 'black';//'#e9841d'; 
+	}
+	}
   if (d === '<5') { return '#4caf45'; }
   return d >= 50 ? '#ab0635' :
     d >= 35  ? '#e9841d' :
@@ -14,9 +38,17 @@ function getColor(d) {
     '#eaeaea';
 }
 
-function getSeverity(d, lang) {
+function getSeverity(d, lang,cntry_id) {
   if (lang === 'de') {
-    if (d === '-') { return 'Keine Angaben'; }
+    //if (d === '-') { return 'Keine Angaben'; }
+	if (d === '-') {
+      if( no_data_sig_concern_country_list_2016.indexOf(cntry_id) === -1 ) {
+	    return 'Unzureichende Daten'; 
+	  }
+	  else {
+		  return 'Unzureichende Daten, Anlass zu erheblicher Besorgnis'; 
+	  }
+	}
     if (d === '<5') { return 'Wenig'; }
     return d >= 50 ? 'Gravierend' :
       d >= 35  ? 'Sehr ernst' :
@@ -25,7 +57,14 @@ function getSeverity(d, lang) {
       d >= 0   ? 'Wenig' :
       'Nicht berechnet';
   } else {
-    if (d === '-') { return 'No data'; }
+    if (d === '-') {
+      if( no_data_sig_concern_country_list_2016.indexOf(cntry_id) === -1 ) {
+	    return 'Insuficient data'; 
+	  }
+	  else {
+		  return 'Insuficient data, significant concern'; 
+	  }
+	}
     if (d === '<5') { return 'Low'; }
     return d >= 50 ? 'Extremely alarming' :
       d >= 35  ? 'Alarming' :
@@ -36,8 +75,16 @@ function getSeverity(d, lang) {
   }
 }
 
-function getSeverityClass(d) {
-  if (d === '-') { return 'no-data'; }
+function getSeverityClass(d,cntry_id) {
+  //if (d === '-') { return 'no-data'; }
+  if (d === '-') {
+      if( no_data_sig_concern_country_list_2016.indexOf(cntry_id) === -1 ) {
+	    return 'no-data'; 
+	  }
+	  else {
+		  return 'no-data-sig-concern'; 
+	  }
+	}
   if (d === '<5') { return 'low'; }
   return d >= 50 ? 'extra-alarming' :
     d >= 35  ? 'alarming' :
@@ -79,6 +126,27 @@ var messages_de = {
     zoomControl: false
   });
   map.addControl(new L.Control.ZoomMin());
+  
+  //YJ: add stripe pattern
+  stripes = new L.StripePattern({
+            /*patternContentUnits: 'objectBoundingBox',
+            patternUnits: 'objectBoundingBox',
+            weight: 0.1,
+            spaceWeight: 0.05,
+            height: 0.15, //0.2,
+            angle: -45,
+			color: 'gray',//work for stripe
+			spaceColor: '#e9841d', //'#e9841d'
+			opacity: 1.0,
+			spaceOpacity: 1.0*/
+			
+		color: 'darkgray',
+		spaceColor: '#e9841d',
+		spaceOpacity: 1,
+		angle: -45
+        });
+  stripes.addTo(map);
+
 
   // new L.tileLayer('http://a{s}.acetate.geoiq.com/tiles/acetate-base/{z}/{x}/{y}.png', {
   new L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png', {
@@ -89,7 +157,8 @@ var messages_de = {
 
   function style(feature) {
     return {
-      fillColor: getColor(feature.properties.score),
+      fillColor: getColor(feature.properties.score, feature.id),
+	  fillPattern: getPattern(feature.id),
       weight: feature.properties.score ? 1 : 0,
       opacity: 0.3,
       color: 'white',
@@ -137,11 +206,11 @@ var messages_de = {
     if (url.indexOf('/de') > -1) {
       m = messages_de;
       name = feature.properties.name_de;
-      level = getSeverity(feature.properties.score, 'de');
+      level = getSeverity(feature.properties.score, 'de', feature.id);
     } else {
       m = messages_en;
       name = feature.properties.name;
-      level = getSeverity(feature.properties.score, 'en');
+      level = getSeverity(feature.properties.score, 'en', feature.id);
     }
 
     var popupContent = '<h4 id=' + feature.id + '>' + name + '</h4>';
@@ -219,7 +288,7 @@ var messages_de = {
         }
         if (c.properties.score !== 'nc' && c.properties.score !== '-') {
           $('<tr>').attr('id', 'table-' + c.id)
-            .attr('class', getSeverityClass(c.properties.score))
+            .attr('class', getSeverityClass(c.properties.score, c.id))
             .attr('role', 'row')
             .append(
                 $('<td class="name">').text(name).wrapInner('<span />'),

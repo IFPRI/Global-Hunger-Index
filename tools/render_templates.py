@@ -30,11 +30,16 @@ csvdata = list(csv.reader(open("../data/messages.csv", 'r')))
 messages = {label: text for label, text, text_de in csvdata}
 messages_de = {label: text_de for label, text, text_de in csvdata}
 
+# YJ: country id for no data, but significant concern
+country_ids_sig_concern_2016 = ["BDI","COM","COD","ERI","LBY","PNG","SOM","SSD","SDN","SYR"]
 
-def get_level_from_score(score):
-    level = ""
-    if score in ("-", "null",""):
-        level = "no-data"
+def get_level_from_score(score, cntry_id):
+    level = ""    
+    if score in ("-", "null"):
+        if cntry_id in country_ids_sig_concern_2016:
+            level = "no-data-sig-concern"
+        else:			
+            level = "no-data"
     elif score == "<5":
         level = "low"
     elif float(score) >= 50:
@@ -52,11 +57,15 @@ def get_level_from_score(score):
     return level
 
 
-def get_verbose_level_from_score(score, lang="en"):
+def get_verbose_level_from_score(score, cntry_id, lang="en"):
     level = ""
+    #print cntry_id
     if lang == "de":
-        if score in ("-", 'null',""):
-            level = "Keine Angaben"
+        if score in ("-", 'null'):
+            if cntry_id in country_ids_sig_concern_2016:
+                level = "Unzureichende Daten, Anlass zu erheblicher Besorgnis"
+            else:			
+                level = "Unzureichende Daten"
         elif score == "<5":
             level = "Wenig"
         elif float(score) >= 50:
@@ -73,8 +82,11 @@ def get_verbose_level_from_score(score, lang="en"):
             print "Unexpected score: ", score
             level = "???"
     else:
-        if score in ("-", 'null',""):
-            level = "No data"
+        if score in ("-", 'null'):
+            if cntry_id in country_ids_sig_concern_2016:
+                level = "Insuficient data, significant concern"
+            else:			
+                level = "Insuficient data"
         elif score == "<5":
             level = "Low"
         elif float(score) >= 50:
@@ -98,7 +110,7 @@ def create_index_page():
 
     table_entries = json.loads(open("../data/table_data.json", "r").read())["data"]
     for entry in table_entries:
-        entry['level'] = get_level_from_score(entry['score']['year2016'])
+        entry['level'] = get_level_from_score(entry['score']['year2016'], entry['id'])
 
     context = {"table_entries": table_entries,
                "m": messages,
@@ -215,8 +227,8 @@ def create_country_pages():
                    "d": country['details'],
                    "name": country['name'],
                    "m": messages,
-                   "level": get_verbose_level_from_score(scores['year2016']),
-                   "level_class": get_level_from_score(scores['year2016']),
+                   "level": get_verbose_level_from_score(scores['year2016'],country_code),
+                   "level_class": get_level_from_score(scores['year2016'], country_code),
                    "relpath": "../../",
                    "linkrelpath": "../../",
                    "lang": "en",
@@ -235,7 +247,7 @@ def create_country_pages():
         context["relpath"] = '../../../'
         context["linkrelpath"] = '../../../de/'
         context["lang"] = 'de'
-        context["level"] = get_verbose_level_from_score(scores['year2016'], lang="de")
+        context["level"] = get_verbose_level_from_score(scores['year2016'], country_code, lang="de")
         contents = template.render(**context)
         dirname = "../site/app/html/de/countries/%s/" % country_code
         if not os.path.exists(dirname):
