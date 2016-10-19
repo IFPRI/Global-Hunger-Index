@@ -22,20 +22,20 @@ function getColor(d,cntry_id) {
   if (d === '-' || d === '') { 
     if( no_data_sig_concern_country_list_2016.indexOf(cntry_id) === -1 ) {
 		//console.log('0-cntry_id : ' + cntry_id);
-	  return '#808080'; 
+	  return '#868889'; 
 	}
     else  {
 		//console.log('1-cntry_id : ' + cntry_id);
 		return 'black';//'#e9841d'; 
 	}
 	}
-  if (d === '<5') { return '#4caf45'; }
-  return d >= 50 ? '#ab0635' :
-    d >= 35  ? '#e9841d' :
-    d >= 20  ? '#fbe0c7' :
-    d >= 10  ? '#bedcb3' :
-    d >= 0   ? '#4caf45' :
-    '#eaeaea';
+  if (d === '<5') { return '#54A526'; }
+  return d >= 50 ? '#AA0132' :
+    d >= 35  ? '#EA8A00' :
+    d >= 20  ? '#F7C589' :
+    d >= 10  ? '#B5D296' :
+    d >= 0   ? '#54A526' :
+    '#EAEAEA';
 }
 
 function getSeverity(d, lang,cntry_id) {
@@ -95,14 +95,16 @@ function getSeverityClass(d,cntry_id) {
 }
 var messages_en = {
   findout: 'Find out more',
-  insuf_data: 'INSUFFICIENT DATA',
+  insuf_data: 'Insufficient data',
+  insuf_sigconcern: 'Insufficient data, significant concern',
   not_calculated: 'Not calculated',
   score: 'Score',
   level: 'Level'
 };
 var messages_de = {
   findout: 'Mehr erfahren',
-  insuf_data: 'UNZUREICHENDE DATEN',
+  insuf_data: 'Unzureichende Daten',
+  insuf_sigconcern: 'Unzureichende Daten, Anlass zu erheblicher Besorgnis',
   not_calculated: 'Nicht berechnet',
   score: 'Punkte',
   level: 'Wert'
@@ -160,10 +162,10 @@ var messages_de = {
       fillColor: getColor(feature.properties.score, feature.id),
 	  fillPattern: getPattern(feature.id),
       weight: feature.properties.score ? 1 : 0,
-      opacity: 0.3,
+      opacity: 1, //0.3,
       color: 'white',
       dashArray: '',
-      fillOpacity: feature.properties.score ? 0.7 : 0
+      fillOpacity: feature.properties.score ? 1 : 0 //0.7 : 0
     };
   }
 
@@ -216,7 +218,12 @@ var messages_de = {
     var popupContent = '<h4 id=' + feature.id + '>' + name + '</h4>';
 
     if (feature.properties.score === '-') {
-      popupContent += '<p><strong>' + m.insuf_data + '</strong></p>';
+		if (name==='Bhutan' ||name ==='Qatar'||name ==='Bahrain')
+			{popupContent += '<p><strong>' + m.insuf_data + '</strong></p>';	
+		}		
+		else {
+			popupContent += '<p><strong>' + m.insuf_sigconcern + '</strong></p>';			
+		}
     } else if (feature.properties.score === 'nc') {
       popupContent += '<p>' + m.score + ': <strong>' + m.not_calculated + '</strong></p>';
     } else {
