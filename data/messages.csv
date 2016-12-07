@@ -33,9 +33,9 @@ map_no_data,Insuficient data,Unzureichende Daten
 map_not_calculated,Industrialized countries,Industrieland
 country_score_data,Country data (in %),Länderdaten (in %)
 country_score_undernourished,Proportion of undernourished in population (%),Anteil der Unterernährten an der Bevölkerung (%)
-country_score_stunting,Prevalence of stunting in children under five years (%),Anteil der ausgezehrten Kinder unter fünf Jahren (%)
+country_score_stunting,Prevalence of stunting in children under five years (%),Anteil der wachstumsverzögerten Kinder unter fünf Jahren (%)
 country_score_mortality,Under five mortality rate (%), Kindersterblichkeit unter fünf (%)
-country_score_wasting,Prevalence of wasting in children under five years (%), Anteil der wachstumsverzögerten Kinder unter fünf Jahren (%)
+country_score_wasting,Prevalence of wasting in children under five years (%), Anteil der ausgezehrten Kinder unter fünf Jahren (%)
 share_title,Share,Teilen
 share_description,Share this visualization with others on your preferred social network.,Teile diese Grafik mit anderen in deinen sozialen Netzwerken
 embed_title,Embed,Einbetten
